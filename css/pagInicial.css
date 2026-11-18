@@ -1,0 +1,99 @@
+body {
+    background-color: #F8F7F2;
+}
+
+* { /* reset geral sla */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'corpo';
+    font-weight: 500;
+}
+
+/* ===  Fontes ====*/
+
+@font-face {
+    font-family: 'corpo';
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'titulo';
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  
+
+/* === HEADER ====*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f8f3;
+    padding: 20px 60px;
+    border-bottom: 1px solid #e5e4df;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
+    margin-bottom: 2rem;
+}
+
+.logo {
+    max-height: 55px;
+    width: auto;
+}
+
+/* container da barra de navegação */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* espaço entre os botões */
+    margin-left: 10rem;
+}
+
+/* tirar estilização dos botões */
+.nav-list a {
+    text-decoration: none;
+    color: #3a443c;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 0.2s;
+}
+
+/* animação quando massa o mouse parabéns */
+.nav-list a:hover {
+    color: #1f3a2e;
+}
+
+/* botão "minha conta" verde escuro */
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #213c31; /* Verde escuro do protótipo */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: background-color 0.2s;
+}
+
+/* animação q deixa mais escuro quando passa o mouse */
+.btn-link:hover {
+    background-color: #172b23;
+}
+
+/* google icons api  */
+.btn-link .material-symbols-outlined {
+    font-size: 20px;
+}
