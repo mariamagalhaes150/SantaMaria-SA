@@ -1,5 +1,6 @@
 body {
     background-color: #F8F7F2;
+    padding-top: 50px;
 }
 
 * { /* reset geral sla */
@@ -8,6 +9,10 @@ body {
     box-sizing: border-box;
     font-family: 'corpo';
     font-weight: 500;
+}
+
+html {
+    scroll-padding-top: 50px;
 }
 
 /* ===  Fontes ====*/
@@ -29,7 +34,7 @@ body {
   }
   
   .content {
-    padding: 5rem;
+    padding: 3.5rem;
   }
   
 
@@ -43,7 +48,13 @@ header {
     padding: 20px 60px;
     border-bottom: 1px solid #e5e4df;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
-    margin-bottom: 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 .logo {
@@ -65,13 +76,6 @@ header {
     color: #3a443c;
     font-size: 15px;
     font-weight: 500;
-
-    transition: color 0.2s;
-}
-
-/* animação quando massa o mouse parabéns */
-.nav-list a:hover {
-    color: #1f3a2e;
 }
 
 /* botão "minha conta" verde escuro */
@@ -79,8 +83,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    background-color: #213c31; /* Verde escuro do protótipo */
+    gap: 3rem;
+    background-color: #213c31;
     color: #ffffff;
     text-decoration: none;
     padding: 12px 28px;
@@ -103,7 +107,7 @@ header {
 
 /* ==== PÁGINA INICIAL ==== */
 
-.heroContent {
+.heroContent { /* A imagem grande*/
     width: 108rem;
     height: 30rem;
     object-fit: cover;
