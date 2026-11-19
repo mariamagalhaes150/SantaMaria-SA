@@ -1,5 +1,6 @@
 body {
     background-color: #F8F7F2;
+    padding-top: 50px;
 }
 
 * { /* reset geral sla */
@@ -8,6 +9,10 @@ body {
     box-sizing: border-box;
     font-family: 'corpo';
     font-weight: 500;
+}
+
+html {
+    scroll-padding-top: 50px;
 }
 
 /* ===  Fontes ====*/
@@ -29,7 +34,7 @@ body {
   }
   
   .content {
-    padding: 5rem;
+    padding: 3.5rem;
   }
   
 
@@ -43,6 +48,13 @@ header {
     padding: 20px 60px;
     border-bottom: 1px solid #e5e4df;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 .logo {
@@ -64,13 +76,6 @@ header {
     color: #3a443c;
     font-size: 15px;
     font-weight: 500;
-
-    transition: color 0.2s;
-}
-
-/* animação quando massa o mouse parabéns */
-.nav-list a:hover {
-    color: #1f3a2e;
 }
 
 /* botão "minha conta" verde escuro */
@@ -78,8 +83,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    background-color: #213c31; /* Verde escuro do protótipo */
+    gap: 3rem;
+    background-color: #213c31;
     color: #ffffff;
     text-decoration: none;
     padding: 12px 28px;
@@ -126,37 +131,65 @@ header {
     height: 25rem;
     background-color: #f9f8f3;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 1rem;
 }
 
 .overlayCard h3 { /* pequenininho em cima*/
     font-size: smaller;
-    color: grey;
+    color: rgb(177, 177, 177);
     font-weight: lighter;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .overlayCard h1 { /* titulo maior */
     font-family: 'titulo';
     font-size: 2.5rem;
     color: #213c31;
-    font-weight: bold;
     margin-bottom: 2rem;
 }
 
 .overlayCard h2 {/* paragrafinho  */
     font-size: 1rem;
-    color: #3a443c;
+    color: rgb(109, 109, 109);
     font-weight: light;
+    margin-bottom: 3rem;
 }
 
-.overlayCard .btn { /* botão do card */
+#contactBtn { /* botão do card */
     background-color: #213c31;
-    width: 100%;
-    height: 2rem;
-    margin-top: auto;
+    width: 22rem;
+    height: 3rem;
     color: white;
-    style: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.tituloHero h1{
+    font-family: 'titulo';
+    font-size: 8rem;
+    color: #213c31;
+    margin-top: 2rem;
+    letter-spacing: -4px;
+}
+
+#subTituloHero {
+    font-size: 2rem;
+    color: rgb(121, 121, 121) ;
+    font-weight: light;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.tituloHero {
+    text-align: center;
 }
