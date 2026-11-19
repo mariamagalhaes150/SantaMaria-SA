@@ -116,6 +116,84 @@ header {
     border-radius: 10px;
 }
 
+.imageWrapper { /* container que vai segurar o card dentro da imagem */
+    position: relative;
+    width: 108rem;
+    height: 30rem;
+    padding-left: 2rem;
+}
+
+.overlayCard { /* O card dentro da imagem */
+    position: absolute;
+    top:0;
+    right:0;
+    width: 25rem;
+    height: 25rem;
+    background-color: #f9f8f3;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 1rem;
+}
+
+.overlayCard h3 { /* pequenininho em cima*/
+    font-size: smaller;
+    color: rgb(177, 177, 177);
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.overlayCard h1 { /* titulo maior */
+    font-family: 'titulo';
+    font-size: 2.5rem;
+    color: #213c31;
+    margin-bottom: 2rem;
+}
+
+.overlayCard h2 {/* paragrafinho  */
+    font-size: 1rem;
+    color: rgb(109, 109, 109);
+    font-weight: light;
+    margin-bottom: 3rem;
+}
+
+#contactBtn { /* botão do card */
+    background-color: #213c31;
+    width: 22rem;
+    height: 3rem;
+    color: white;
+    outline: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.tituloHero h1{
+    font-family: 'titulo';
+    font-size: 7rem;
+    color: #213c31;
+    letter-spacing: -4px;
+}
+
+#subTituloHero {
+    font-size: 2rem;
+    color: rgb(121, 121, 121) ;
+    font-weight: light;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.tituloHero {
+    text-align: center;
+}
+
+
 /* ==== RODAPÉ ==== */
 
 /* Seleciona a tag principal do rodapé */
