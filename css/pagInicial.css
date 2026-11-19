@@ -255,12 +255,14 @@ header {
     font-weight: 400;
     color: #ffffff;
     margin-bottom: 16px;
+    font: 'titulo';
 }
 
 /* Coluna Contatos */
 .footer-santa-maria .col-contatos {
     flex: 1;
     min-width: 150px;
+    font-family: 'titulo';
 }
 
 /* Seleciona o texto do slogan ("Cuidar é estar presente.") */
@@ -307,21 +309,6 @@ header {
     text-decoration: none;
 }
 
-.tituloHero h1{
-    font-family: 'titulo';
-    font-size: 8rem;
-    color: #213c31;
-    margin-top: 2rem;
-    letter-spacing: -4px;
-}
-
-#subTituloHero {
-    font-size: 2rem;
-    color: rgb(121, 121, 121) ;
-    font-weight: light;
-    margin-bottom: 3rem;
-    letter-spacing: 2px;
-}
 
 /* Seleciona o texto "Mapa ilustrativo" abaixo do mapa */
 .footer-santa-maria .mapa-legenda {
@@ -343,3 +330,4 @@ header {
     font-size: 11px;
     color: #b8c2bd;
 }
+
