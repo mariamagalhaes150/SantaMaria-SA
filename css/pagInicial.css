@@ -43,7 +43,6 @@ header {
     padding: 20px 60px;
     border-bottom: 1px solid #e5e4df;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
-    margin-bottom: 1rem;
 }
 
 .logo {
@@ -103,11 +102,61 @@ header {
 
 /* ==== PÁGINA INICIAL ==== */
 
-.heroContent {
+.heroContent { /* A imagem grande*/
     width: 108rem;
     height: 30rem;
     object-fit: cover;
     object-position: bottom left; 
     transform: scaleX(-1);
     border-radius: 10px;
+}
+
+.imageWrapper { /* container que vai segurar o card dentro da imagem */
+    position: relative;
+    width: 108rem;
+    height: 30rem;
+    padding-left: 2rem;
+}
+
+.overlayCard { /* O card dentro da imagem */
+    position: absolute;
+    top:0;
+    right:0;
+    width: 25rem;
+    height: 25rem;
+    background-color: #f9f8f3;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 1rem;
+}
+
+.overlayCard h3 { /* pequenininho em cima*/
+    font-size: smaller;
+    color: grey;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.overlayCard h1 { /* titulo maior */
+    font-family: 'titulo';
+    font-size: 2.5rem;
+    color: #213c31;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.overlayCard h2 {/* paragrafinho  */
+    font-size: 1rem;
+    color: #3a443c;
+    font-weight: light;
+}
+
+.overlayCard .btn { /* botão do card */
+    background-color: #213c31;
+    width: 100%;
+    height: 2rem;
+    margin-top: auto;
+    color: white;
+    style: none;
 }
