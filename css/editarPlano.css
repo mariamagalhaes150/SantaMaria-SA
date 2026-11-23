@@ -158,12 +158,61 @@ header {
     border-radius: 5px;
     margin-top: 1rem;
     color: #3a443c;
+    margin-bottom: 1rem;
 }
 
-
-
 .mainMenu { /*Parte superior desse menuzinho*/
+    border-bottom: #c9c7bf 1px solid;
+}
 
+/* Titulos de cima */
+
+.titulo h3 {
+    color: grey;
+    letter-spacing: 2px;
+    font-size: small;
+    margin-bottom: 1.5rem;
+}
+
+.titulo h1 {
+    color: #213c13;
+    font-family: 'titulo', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.titulo h2 {
+    color: #3a443c;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.titulo a {
+
+}
+
+/*==== CARD DO PERFIL ====*/
+
+.cardPerfil {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5rem;
+    border:#c9c7bf 1px solid;
+}
+
+#profileImage {
+    height: 3.5rem;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pfpName {
+    display: flex;
+    gap: 20px;
 }
 
 /* ====FOOTER ----*/

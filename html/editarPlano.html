@@ -6,6 +6,7 @@
     <title>Santa Maria - Funerária </title>
     <link rel="stylesheet" href="../css/editarPlano.css"> <!-- link do css-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> <!--Link dos icons (google api)-->
+    <script src="../javascript/editarPlano.js" defer></script>
 </head>
 <body>
     <header> <!-- Menu de navegação da página, com logo e parte de login ao lado-->
@@ -57,15 +58,17 @@
                     <h2>Seus dados, sempre por perto. Atualize suas informações com tranquilidade.</h2>
                 </div>
                 <div class="cardPerfil">    
-                    <div class="PfpName">
-                        <div class="Pfp">
-                            <img src="../img/perfil.png" alt="Foto de perfil do usuário">
-                        </div>
-                        <div class="Name">
-                            <h1>Nome do Usuário</h1>
-                            <label for="galleryInput" style="color: blue; text-decoration: underline; cursor: pointer;">
-                                Alterar foto
+                    <div class="pfpName">
+                        <div class="pfp"> 
+                            <img id="profileImage" src="../img/fotoPerfil.jpg" alt="Foto de perfil do usuário"> 
+                        </div> 
+                        <h1>Nome do Usuário<br></h1> 
+
+                        <div class="Name"> 
+                            <label for="galleryInput" style="color: blue; text-decoration: underline; cursor: pointer;"> 
+                                Alterar foto 
                             </label>
+                            <input type="file" id="galleryInput" accept="image/*" style="display: none;">
                         </div>
                     </div>
                     <form action="Salvar alterações" method="POST">
@@ -96,6 +99,12 @@
             </div>
 
             <div class="containerDetails"> 
+                <a href="editarPlano.html" class="buttonHero">
+                    Gerenciar pessoas do Plano
+                    <span class="material-symbols-outlined"> <!-- bonequinho do login no botão-->
+                        arrow_outward
+                    </span>
+                </a>
                 <div class="cardInfo">
                     <img src="../img/iconePlano.png" alt="Ícone do plano">
                     <h1>Cuidar começa nos detalhes.</h1>
@@ -107,7 +116,7 @@
                 </div>
                 <div class="cardInfo3">
                     <h1>Pessoas no seu plano</h1>
-                    <a href="editarPlano.html" class="btn-link">
+                    <a href="editarPlano.html" class="btnOut">
                         Gerenciar pessoas do Plano
                         <span class="material-symbols-outlined"> <!-- bonequinho do login no botão-->
                             arrow_outward
@@ -118,10 +127,10 @@
             </div>
         </div>
     </div>
+
     <footer class="footer-santa-maria"> <!-- IZZIE -->
         <div class="footer-container">
             <div class="footer-top">
-                
                 <!-- Coluna 1: Marca -->
                 <div class="footer-col col-marca">
                     <h2 class="footer-logo">Santa Maria</h2>
@@ -151,7 +160,6 @@
                 <div class="footer-col col-menu">
                     <h3>Menu</h3>
                     <ul>
-                        <!-- Para linkar com as páginas!-->
                         <li><a href="#">Planos</a></li>
                         <li><a href="#">Contatos</a></li>
                         <li><a href="#">Quem somos</a></li>
@@ -169,18 +177,14 @@
                     </div>
                     <span class="mapa-legenda">P.S.: mapa ilustrativo!</span>
                 </div>
-    
             </div>
-        <footer> <!--IZZIE -->
-
+    
             <!-- Créditos -->
             <hr class="footer-linha">
-    
             <div class="footer-bottom">
                 <p>Desenvolvido por: Emanuela Gonçalves, Gabriela M. Leite, Isadora R. Guilherme e Maria E. Magalhães.</p>
             </div>
-        </div>
+        </div> <!-- Fecha .footer-container -->
     </footer>
-        </footer>
-    </div>
+    
 </html>
