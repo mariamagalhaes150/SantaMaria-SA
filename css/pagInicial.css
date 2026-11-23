@@ -1,5 +1,6 @@
 body {
     background-color: #F8F7F2;
+    padding-top: 50px;
 }
 
 * { /* reset geral sla */
@@ -10,11 +11,15 @@ body {
     font-weight: 500;
 }
 
+html {
+    scroll-padding-top: 50px;
+}
+
 /* ===  Fontes ====*/
 
 @font-face {
     font-family: 'corpo';
-     src: url('../fonts/Inter.ttf') format('truetype');
+    src: url('../fonts/Inter.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -29,7 +34,7 @@ body {
   }
   
   .content {
-    padding: 5rem;
+    padding: 3.5rem;
   }
   
 
@@ -43,6 +48,13 @@ header {
     padding: 20px 60px;
     border-bottom: 1px solid #e5e4df;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 .logo {
@@ -64,13 +76,6 @@ header {
     color: #3a443c;
     font-size: 15px;
     font-weight: 500;
-
-    transition: color 0.2s;
-}
-
-/* animação quando massa o mouse parabéns */
-.nav-list a:hover {
-    color: #1f3a2e;
 }
 
 /* botão "minha conta" verde escuro */
@@ -78,8 +83,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    background-color: #213c31; /* Verde escuro do protótipo */
+    gap: 3rem;
+    background-color: #213c31;
     color: #ffffff;
     text-decoration: none;
     padding: 12px 28px;
@@ -126,256 +131,424 @@ header {
     height: 25rem;
     background-color: #f9f8f3;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 1rem;
 }
 
 .overlayCard h3 { /* pequenininho em cima*/
     font-size: smaller;
-    color: grey;
+    color: rgb(177, 177, 177);
     font-weight: lighter;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .overlayCard h1 { /* titulo maior */
     font-family: 'titulo';
     font-size: 2.5rem;
     color: #213c31;
-    font-weight: bold;
     margin-bottom: 2rem;
 }
 
 .overlayCard h2 {/* paragrafinho  */
     font-size: 1rem;
-    color: #3a443c;
+    color: rgb(109, 109, 109);
     font-weight: light;
+    margin-bottom: 3rem;
 }
 
-.overlayCard .btn { /* botão do card */
+#contactBtn { /* botão do card */
     background-color: #213c31;
-    width: 100%;
-    height: 2rem;
-    margin-top: auto;
+    width: 22rem;
+    height: 3rem;
     color: white;
+    outline: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5rem;
+    font-size: 1.6rem;
+    text-decoration: none;
 }
-/*Foto da flor branca dos planos*/
+
+.tituloHero h1{
+    font-family: 'titulo';
+    font-size: 7rem;
+    color: #213c31;
+    letter-spacing: -4px;
+}
+
+#subTituloHero {
+    font-size: 2rem;
+    color: rgb(121, 121, 121) ;
+    font-weight: light;
+    margin-bottom: 5rem;
+    letter-spacing: 2px;
+}
+
+.tituloHero {
+    text-align: center;
+}
+
+/* ==== PLANOS ====*/
+
 /*Foto da flor branca dos planos*/
 .foto-flores {
-  width: 340px;
-  height: 165px;
-  object-fit: cover;
-  border-radius: 60px 0px 60px 0px;
-  display: block;
-}
+    width: 340px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 60px 0px 60px 0px;
+    display: block;
+  }
+  .secao-planos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f6f2;
+    padding: 40px 20px;
+  }
 
-.secao-planos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f7f6f2;
-  padding: 40px 20px;
-}
-
-/*Escrita da foto de baixo dos planos*/
+/*Ewcrita da foto de baixo dos planos*/
 @font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
-}
-
-.subtitulo-topo {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  color: #5c635e;
-  margin-bottom: 12px;
-}
-
-.titulo-planos {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 48px;
-  font-weight: 400;
-  color: #2c4237;
-  margin: 0 0 16px 0;
-}
-
-.descricao-planos {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #5c635e;
-  margin: 0;
-}
-
+    font-family: 'Inter';
+    src: url('../fonts/Inter.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+  }
+  
+  .secao-planos {
+    background-color: #f7f6f2;
+    padding: 40px 20px;
+  }
+  
+  .subtitulo-topo {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #5c635e;
+    margin-bottom: 12px;
+  }
+  
+  .titulo-planos {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #2c4237;
+    margin: 0 0 16px 0;
+  }
+  
+  .descricao-planos {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #5c635e;
+    margin: 0;
+  }
 /* caixa dos planos*/
 .cards-planos {
-  display: flex;
-  gap: 24px;
-  padding: 20px;
+    display: flex;
+    gap: 24px;
+    padding: 20px;
+  }
+  
+  .card-plano {
+    flex: 1;
+    background-color: #fbfaf7;
+    border: 1px solid #e2e0d8;
+    border-radius: 8px;
+    padding: 0 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-plano.destaque {
+    background-color: #e6ebe5;
+    border-color: #5b6d62;
+  }
+  
+  .linha-topo {
+    height: 3px;
+    background-color: #d5d8d2;
+    margin-bottom: 24px;
+  }
+  
+  .card-plano.destaque .linha-topo {
+    background-color: #213c31;
+  }
+  
+  .numero-plano {
+    font-family: 'corpo', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #6b726d;
+    margin-bottom: 8px;
+  }
+  
+  .nome-plano {
+    font-family: 'titulo', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #213c31;
+    margin: 0 0 6px 0;
+  }
+  
+  .sub-plano {
+    font-family: 'corpo', sans-serif;
+    font-size: 13px;
+    color: #5c635e;
+    margin: 0;
+  }
+  
+  .divisor {
+    border: none;
+    border-top: 1px solid #e2e0d8;
+    margin: 22px 0;
+  }
+  
+  .card-plano.destaque .divisor {
+    border-top-color: #ced5cd;
+  }
+  
+  .lista-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex-grow: 1;
+  }
+  
+  .item-beneficio strong {
+    display: block;
+    font-family: 'corpo', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #213c31;
+    margin-bottom: 4px;
+  }
+  
+  .item-beneficio p {
+    font-family: 'corpo', sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #5c635e;
+    margin: 0;
+  }
+  
+  .label-preco {
+    display: block;
+    font-family: 'corpo', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: #6b726d;
+    margin-bottom: 6px;
+  }
+  
+  .valor-mensal {
+    font-family: 'titulo', serif;
+    font-size: 28px;
+    color: #213c31;
+  }
+  
+  .por-mes {
+    display: block;
+    font-family: 'corpo', sans-serif;
+    font-size: 12px;
+    color: #6b726d;
+    margin-bottom: 16px;
+  }
+  
+  .label-urgencia {
+    display: block;
+    font-family: 'corpo', sans-serif;
+    font-size: 12px;
+    color: #6b726d;
+    margin-bottom: 4px;
+  }
+  
+  .valor-urgencia {
+    font-family: 'corpo', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #213c31;
+    margin-bottom: 22px;
+  }
+  
+  .btn-plano {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #213c31;
+    border-radius: 4px;
+    color: #213c31;
+    text-decoration: none;
+    font-family: 'corpo', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+  
+  .btn-plano:hover {
+    background-color: #213c31;
+    color: #ffffff;
+  }
+  
+  .card-plano.destaque .btn-plano {
+    background-color: #213c31;
+    color: #ffffff;
+  }
+  
+  .card-plano.destaque .btn-plano:hover {
+    background-color: #172b23;
+  }
+  
+  .rodape-planos {
+    text-align: center;
+    font-family: 'corpo', sans-serif;
+    font-size: 12px;
+    color: #6b726d;
+    margin-top: 12px;
+  }
+
+/* ==== RODAPÉ ==== */
+
+/* Seleciona a tag principal do rodapé */
+.footer-santa-maria {
+    background-color: #21372e;
+    color: #e6eae7;
+    padding: 55px 20px 35px;
+    box-sizing: border-box;
 }
 
-.card-plano,
-.card-plano.destaque {
-  flex: 1;
-  background-color: #fbfaf7 !important;
-  border: 1px solid #e2e0d8 !important;
-  border-radius: 8px;
-  padding: 0 28px 28px 28px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s;
+/* O asterisco (*) seleciona TODOS os elementos que estão dentro do rodapé */
+.footer-santa-maria * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.card-plano:hover {
-  background-color: #e6ebe5 !important;
-  border-color: #5b6d62 !important;
+/* Container que segura e centraliza o conteúdo para não ficar colado nas pontas em telas muito grandes */
+.footer-santa-maria .footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
-.linha-topo,
-.card-plano.destaque .linha-topo {
-  height: 3px;
-  background-color: #d5d8d2 !important;
-  margin-bottom: 24px;
-  transition: 0.3s;
+/* Bloco superior onde ficam as colunas (Marca, Contatos, Menu e Unidades) */
+.footer-santa-maria .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-bottom: 35px;
 }
 
-.card-plano:hover .linha-topo {
-  background-color: #213c31 !important;
+/* Coluna Marca */
+.footer-santa-maria .col-marca {
+    flex: 1.4;
+    min-width: 210px;
 }
 
-.numero-plano {
-  font-family: 'corpo', sans-serif;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  color: #6b726d;
-  margin-bottom: 8px;
+/* Seleciona o título principal da marca ("Santa Maria") */
+.footer-santa-maria .footer-logo {
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-size: 32px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
-.nome-plano {
-  font-family: 'titulo', serif;
-  font-size: 36px;
-  font-weight: 400;
-  color: #213c31;
-  margin: 0 0 6px 0;
+/* Seleciona o texto do slogan ("Cuidar é estar presente.") */
+.footer-santa-maria .footer-slogan {
+    font-size: 14px;
+    color: #cfd6d2;
 }
 
-.sub-plano {
-  font-family: 'corpo', sans-serif;
-  font-size: 13px;
-  color: #5c635e;
-  margin: 0;
+/* Títulos das Colunas */
+.footer-santa-maria .footer-col h3 {
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 16px;
+    font: 'titulo';
 }
 
-.divisor,
-.card-plano.destaque .divisor {
-  border: none;
-  border-top: 1px solid #e2e0d8 !important;
-  margin: 22px 0;
-  transition: 0.3s;
+/* Coluna Contatos */
+.footer-santa-maria .col-contatos {
+    flex: 1;
+    min-width: 150px;
+    font-family: 'titulo';
 }
 
-.card-plano:hover .divisor {
-  border-top-color: #ced5cd !important;
+/* Seleciona o texto do slogan ("Cuidar é estar presente.") */
+/* Seleciona as listas não ordenadas (<ul>) dentro das colunas de Contatos e Menu */
+.footer-santa-maria .col-contatos ul,
+.footer-santa-maria .col-menu ul {
+    list-style: none;
 }
 
-.lista-beneficios {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  flex-grow: 1;
+/* Seleciona cada item da lista (<li>) dentro da coluna de Contatos */
+.footer-santa-maria .col-contatos li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
 }
 
-.item-beneficio strong {
-  display: block;
-  font-family: 'corpo', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #213c31;
-  margin-bottom: 4px;
+/* Seleciona os rótulos menores dos contatos (ex: "Atendimento", "Assistência") */
+.footer-santa-maria .contato-label {
+    font-size: 10px;
+    color: #aeb8b3;
+    margin-bottom: 2px;
 }
 
-.item-beneficio p {
-  font-family: 'corpo', sans-serif;
-  font-size: 13px;
-  line-height: 1.45;
-  color: #5c635e;
-  margin: 0;
+/* Seleciona os valores/números dos contatos */
+.footer-santa-maria .contato-valor {
+    font-size: 13px;
+    color: #e6eae7;
 }
 
-.label-preco {
-  display: block;
-  font-family: 'corpo', sans-serif;
-  font-size: 10px;
-  letter-spacing: 1.2px;
-  color: #6b726d;
-  margin-bottom: 6px;
+/* Coluna Menu */
+.footer-santa-maria .col-menu {
+    flex: 1;
+    min-width: 140px;
 }
 
-.valor-mensal {
-  font-family: 'titulo', serif;
-  font-size: 28px;
-  color: #213c31;
+/* Seleciona cada item da lista (<li>) dentro da coluna de Menu */
+.footer-santa-maria .col-menu li {
+    margin-bottom: 12px;
 }
 
-.por-mes {
-  display: block;
-  font-family: 'corpo', sans-serif;
-  font-size: 12px;
-  color: #6b726d;
-  margin-bottom: 16px;
+/* Seleciona os links (<a>) dentro da coluna de Menu */
+.footer-santa-maria .col-menu a {
+    color: #dce2df;
+    text-decoration: none;
 }
 
-.label-urgencia {
-  display: block;
-  font-family: 'corpo', sans-serif;
-  font-size: 12px;
-  color: #6b726d;
-  margin-bottom: 4px;
+
+/* Seleciona o texto "Mapa ilustrativo" abaixo do mapa */
+.footer-santa-maria .mapa-legenda {
+    display: block;
+    font-size: 10px;
+    color: #aeb8b3;
+    margin-top: 6px;
 }
 
-.valor-urgencia {
-  font-family: 'corpo', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #213c31;
-  margin-bottom: 22px;
+/* Linha e Créditos */
+.footer-santa-maria .footer-linha {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 20px;
 }
 
-.btn-plano,
-.card-plano.destaque .btn-plano {
-  display: block;
-  text-align: center;
-  padding: 12px;
-  border: 1px solid #213c31;
-  border-radius: 4px;
-  background-color: transparent !important;
-  color: #213c31 !important;
-  text-decoration: none;
-  font-family: 'corpo', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  transition: 0.2s;
+/* Seleciona o parágrafo de créditos na parte inferior ("desenvolvido por...") */
+.footer-santa-maria .footer-bottom p {
+    font-size: 11px;
+    color: #b8c2bd;
 }
 
-.card-plano:hover .btn-plano {
-  background-color: #213c31 !important;
-  color: #ffffff !important;
-}
-
-.card-plano .btn-plano:hover {
-  background-color: #172b23 !important;
-}
-
-.rodape-planos {
-  text-align: center;
-  font-family: 'corpo', sans-serif;
-  font-size: 12px;
-  color: #6b726d;
-  margin-top: 12px;
-}
