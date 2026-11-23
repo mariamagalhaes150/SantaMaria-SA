@@ -1,0 +1,153 @@
+/* SEÇÃO: UNIDADES*/
+   #unidades {
+    font-family: 'corpo', sans-serif;
+    letter-spacing: 1px;
+    background-color: #F7F5F0;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 0 0 calc(50% - 50vw);
+    padding: 5rem 6vw;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-areas:
+        "intro intro"
+        "locais imagem"
+        "frase frase";
+    column-gap: 4.5rem;
+    row-gap: 2.5rem;
+    align-items: start;
+}
+
+/* Cabeçalho */
+.txt-introducao-unid {
+    grid-area: intro;
+}
+
+.txt-introducao-unid h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #7A827A;
+    margin: 0 0 0.75rem 0;
+}
+
+.txt-introducao-unid h1 {
+    font-family: 'titulo', serif;
+    font-size: clamp(2.5rem, 4vw, 3.6rem);
+    font-weight: 400;
+    color: #21382B;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* Coluna da esquerda: lista de unidades */
+.localizacao {
+    grid-area: locais;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.unidade-rs,
+.unidade-sc,
+.unidade-pr {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    column-gap: 1.1rem;
+    align-items: start;
+}
+
+.icone-pin {
+    grid-row: 1 / 3;
+    font-size: 28px;
+    color: #21382B;
+    line-height: 1;
+    margin-top: 0.15rem;
+    user-select: none;
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.unidade-rs h2,
+.unidade-sc h2,
+.unidade-pr h2 {
+    font-family: 'titulo', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #21382B;
+    line-height: 1.25;
+    margin: 0 0 0.35rem 0;
+}
+
+.unidade-rs p,
+.unidade-sc p,
+.unidade-pr p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #5A665E;
+    margin: 0;
+}
+
+.unidade-rs p,
+.unidade-sc p {
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid #E2E4DD;
+}
+
+/* Coluna da direita: imagem e legenda */
+.imagem-unid {
+    grid-area: imagem;
+}
+
+.imagem-unid .foto-flores {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    border-radius: 65px 0 65px 0;
+}
+
+.legenda-unid {
+    font-size: 1rem;
+    color: #7A827A;
+    margin: 0.85rem 0 0 0;
+}
+
+/* Faixa inferior com frase de acolhimento */
+.box-frase {
+    grid-area: frase;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E7EBE2;
+    border-radius: 6px;
+    padding: 1.55rem 2.2rem;
+    margin-top: 0.75rem;
+}
+
+.box-frase h3 {
+    font-family: 'titulo', serif;
+    font-size: clamp(1.25rem, 1.8vw, 1.45rem);
+    font-weight: 400;
+    color: #21382B;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 860px) {
+    #unidades {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "locais"
+            "imagem"
+            "frase";
+        padding: 3.5rem 6vw;
+        row-gap: 2rem;
+    }
+
+    .imagem-unid .foto-flores {
+        border-radius: 45px 0 45px 0;
+    }
+}
