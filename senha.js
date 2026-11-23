@@ -14,6 +14,7 @@ document.getElementById('form-etapa-1').addEventListener('submit', function(even
 
   document.getElementById('etapa-1').style.display = 'none';
   document.getElementById('etapa-2').style.display = 'block';
+  
 });
 
 // ETAPA 2: Confere o código e avança para a Etapa 3
