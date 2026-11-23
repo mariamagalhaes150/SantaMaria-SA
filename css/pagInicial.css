@@ -160,221 +160,222 @@ header {
     color: white;
 }
 /*Foto da flor branca dos planos*/
+/*Foto da flor branca dos planos*/
 .foto-flores {
-    width: 340px;
-    height: 165px;
-    object-fit: cover;
-    border-radius: 60px 0px 60px 0px;
-    display: block;
-  }
-  .secao-planos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f7f6f2;
-    padding: 40px 20px;
-  }
+  width: 340px;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 60px 0px 60px 0px;
+  display: block;
+}
 
-/*Ewcrita da foto de baixo dos planos*/
+.secao-planos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f6f2;
+  padding: 40px 20px;
+}
+
+/*Escrita da foto de baixo dos planos*/
 @font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter.ttf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'Cormorant Garamond';
-    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
-  }
-  
-  .secao-planos {
-    background-color: #f7f6f2;
-    padding: 40px 20px;
-  }
-  
-  .subtitulo-topo {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: #5c635e;
-    margin-bottom: 12px;
-  }
-  
-  .titulo-planos {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 400;
-    color: #2c4237;
-    margin: 0 0 16px 0;
-  }
-  
-  .descricao-planos {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #5c635e;
-    margin: 0;
-  }
+  font-family: 'Inter';
+  src: url('../fonts/Inter.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+}
+
+.subtitulo-topo {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #5c635e;
+  margin-bottom: 12px;
+}
+
+.titulo-planos {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #2c4237;
+  margin: 0 0 16px 0;
+}
+
+.descricao-planos {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #5c635e;
+  margin: 0;
+}
+
 /* caixa dos planos*/
 .cards-planos {
-    display: flex;
-    gap: 24px;
-    padding: 20px;
-  }
-  
-  .card-plano {
-    flex: 1;
-    background-color: #fbfaf7;
-    border: 1px solid #e2e0d8;
-    border-radius: 8px;
-    padding: 0 28px 28px 28px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-plano.destaque {
-    background-color: #e6ebe5;
-    border-color: #5b6d62;
-  }
-  
-  .linha-topo {
-    height: 3px;
-    background-color: #d5d8d2;
-    margin-bottom: 24px;
-  }
-  
-  .card-plano.destaque .linha-topo {
-    background-color: #213c31;
-  }
-  
-  .numero-plano {
-    font-family: 'corpo', sans-serif;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: #6b726d;
-    margin-bottom: 8px;
-  }
-  
-  .nome-plano {
-    font-family: 'titulo', serif;
-    font-size: 36px;
-    font-weight: 400;
-    color: #213c31;
-    margin: 0 0 6px 0;
-  }
-  
-  .sub-plano {
-    font-family: 'corpo', sans-serif;
-    font-size: 13px;
-    color: #5c635e;
-    margin: 0;
-  }
-  
-  .divisor {
-    border: none;
-    border-top: 1px solid #e2e0d8;
-    margin: 22px 0;
-  }
-  
-  .card-plano.destaque .divisor {
-    border-top-color: #ced5cd;
-  }
-  
-  .lista-beneficios {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    flex-grow: 1;
-  }
-  
-  .item-beneficio strong {
-    display: block;
-    font-family: 'corpo', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: #213c31;
-    margin-bottom: 4px;
-  }
-  
-  .item-beneficio p {
-    font-family: 'corpo', sans-serif;
-    font-size: 13px;
-    line-height: 1.45;
-    color: #5c635e;
-    margin: 0;
-  }
-  
-  .label-preco {
-    display: block;
-    font-family: 'corpo', sans-serif;
-    font-size: 10px;
-    letter-spacing: 1.2px;
-    color: #6b726d;
-    margin-bottom: 6px;
-  }
-  
-  .valor-mensal {
-    font-family: 'titulo', serif;
-    font-size: 28px;
-    color: #213c31;
-  }
-  
-  .por-mes {
-    display: block;
-    font-family: 'corpo', sans-serif;
-    font-size: 12px;
-    color: #6b726d;
-    margin-bottom: 16px;
-  }
-  
-  .label-urgencia {
-    display: block;
-    font-family: 'corpo', sans-serif;
-    font-size: 12px;
-    color: #6b726d;
-    margin-bottom: 4px;
-  }
-  
-  .valor-urgencia {
-    font-family: 'corpo', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #213c31;
-    margin-bottom: 22px;
-  }
-  
-  .btn-plano {
-    display: block;
-    text-align: center;
-    padding: 12px;
-    border: 1px solid #213c31;
-    border-radius: 4px;
-    color: #213c31;
-    text-decoration: none;
-    font-family: 'corpo', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    transition: 0.2s;
-  }
-  
-  .btn-plano:hover {
-    background-color: #213c31;
-    color: #ffffff;
-  }
-  
-  .card-plano.destaque .btn-plano {
-    background-color: #213c31;
-    color: #ffffff;
-  }
-  
-  .card-plano.destaque .btn-plano:hover {
-    background-color: #172b23;
-  }
-  
-  .rodape-planos {
-    text-align: center;
-    font-family: 'corpo', sans-serif;
-    font-size: 12px;
-    color: #6b726d;
-    margin-top: 12px;
-  }
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+}
+
+.card-plano,
+.card-plano.destaque {
+  flex: 1;
+  background-color: #fbfaf7 !important;
+  border: 1px solid #e2e0d8 !important;
+  border-radius: 8px;
+  padding: 0 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.card-plano:hover {
+  background-color: #e6ebe5 !important;
+  border-color: #5b6d62 !important;
+}
+
+.linha-topo,
+.card-plano.destaque .linha-topo {
+  height: 3px;
+  background-color: #d5d8d2 !important;
+  margin-bottom: 24px;
+  transition: 0.3s;
+}
+
+.card-plano:hover .linha-topo {
+  background-color: #213c31 !important;
+}
+
+.numero-plano {
+  font-family: 'corpo', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #6b726d;
+  margin-bottom: 8px;
+}
+
+.nome-plano {
+  font-family: 'titulo', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #213c31;
+  margin: 0 0 6px 0;
+}
+
+.sub-plano {
+  font-family: 'corpo', sans-serif;
+  font-size: 13px;
+  color: #5c635e;
+  margin: 0;
+}
+
+.divisor,
+.card-plano.destaque .divisor {
+  border: none;
+  border-top: 1px solid #e2e0d8 !important;
+  margin: 22px 0;
+  transition: 0.3s;
+}
+
+.card-plano:hover .divisor {
+  border-top-color: #ced5cd !important;
+}
+
+.lista-beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-grow: 1;
+}
+
+.item-beneficio strong {
+  display: block;
+  font-family: 'corpo', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #213c31;
+  margin-bottom: 4px;
+}
+
+.item-beneficio p {
+  font-family: 'corpo', sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #5c635e;
+  margin: 0;
+}
+
+.label-preco {
+  display: block;
+  font-family: 'corpo', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  color: #6b726d;
+  margin-bottom: 6px;
+}
+
+.valor-mensal {
+  font-family: 'titulo', serif;
+  font-size: 28px;
+  color: #213c31;
+}
+
+.por-mes {
+  display: block;
+  font-family: 'corpo', sans-serif;
+  font-size: 12px;
+  color: #6b726d;
+  margin-bottom: 16px;
+}
+
+.label-urgencia {
+  display: block;
+  font-family: 'corpo', sans-serif;
+  font-size: 12px;
+  color: #6b726d;
+  margin-bottom: 4px;
+}
+
+.valor-urgencia {
+  font-family: 'corpo', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #213c31;
+  margin-bottom: 22px;
+}
+
+.btn-plano,
+.card-plano.destaque .btn-plano {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #213c31;
+  border-radius: 4px;
+  background-color: transparent !important;
+  color: #213c31 !important;
+  text-decoration: none;
+  font-family: 'corpo', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.card-plano:hover .btn-plano {
+  background-color: #213c31 !important;
+  color: #ffffff !important;
+}
+
+.card-plano .btn-plano:hover {
+  background-color: #172b23 !important;
+}
+
+.rodape-planos {
+  text-align: center;
+  font-family: 'corpo', sans-serif;
+  font-size: 12px;
+  color: #6b726d;
+  margin-top: 12px;
+}
