@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Maria - Funerária </title>
-    <link rel="stylesheet" href="../css/editarPlano.css"> <!-- link do css-->
+    <link rel="stylesheet" href="../css/editarPerfil.css"> <!-- link do css-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> <!--Link dos icons (google api)-->
     <script src="../javascript/editarPlano.js" defer></script>
 </head>
@@ -14,11 +14,11 @@
         <div class="navbar"> 
             <nav> <!--navegação-->
                 <ul class="navList" id="navList"> <!-- container das navegações da página -->
-                  <li><a href="#inicio">Início</a></li>
-                  <li><a href="#planos">Planos</a></li>
-                  <li><a href="#contatos">Contatos</a></li>
-                  <li><a href="#quemSomos">Quem Somos</a></li>
-                  <li><a href="#unidades">Unidades</a></li>
+                  <li><a href="pagInicial.html">Início</a></li>
+                  <li><a href="pagInicial.html#planos">Planos</a></li>
+                  <li><a href="pagInicial.html#contatos">Contatos</a></li>
+                  <li><a href="pagInicial.html#quemSomos">Quem Somos</a></li>
+                  <li><a href="pagInicial.html#unidades">Unidades</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +35,7 @@
         <div class="verticalMenu"> <!-- menu que fica na vertical (nossa q surpresa)-->
             <div class="mainMenu"> <!-- parte superior desse menuzinho -->
                 <h2>ÁREA DO CLIENTE</h2>
-                <a href="editarPerfil.html" class="btnInactive">
+                <a href="pessoasPlano.html" class="btnInactive">
                     <span class="material-symbols-outlined"> <!-- setinha voltar-->
                         arrow_back
                     </span>
@@ -56,7 +56,7 @@
                 <h3>MINHA CONTA / MEU PERFIL</h3>
                 <div class="tituloLinha"> <!-- titulo + botão "pessoas do plano" lado a lado -->
                     <h1>Editar perfil</h1>
-                    <a href="editarPlano.html" class="buttonHero">
+                    <a href="pessoasPlano.html" class="buttonHero">
                         <span class="material-symbols-outlined"> <!-- setinha do botão-->
                             arrow_back
                         </span>
@@ -69,7 +69,7 @@
             <div class="cardPerfil"> <!-- card principal do perfil -->
                 <div class="pfpName"> <!-- foto + nome do usuário -->
                     <div class="pfp"> 
-                        <img id="profileImage" src="../img/fotoPerfil.jpg" alt="Foto de perfil do usuário"> 
+                        <img id="profileImage" src="../img/fotoPerfil.avif" alt="Foto de perfil do usuário"> 
                     </div> 
                     <div class="nameBox"> 
                         <h2>Mariana Souza</h2>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="cardInfo3">
                     <h2>3 pessoas no seu plano</h2>
-                    <a href="editarPlano.html" class="btnOut">
+                    <a href="pessoasPlano.html" class="btnOut">
                         Gerenciar pessoas do plano
                         <span class="material-symbols-outlined"> <!-- setinha diagonal-->
                             arrow_outward
