@@ -63,7 +63,7 @@
                 </div>
               
                 <!--Imagem das fotos-->
-                <img src="../img/fotoflor.jpeg" alt="flores brancas" class="foto-flores">
+                <img src="../img/fotoflor.jpeg" alt="flores brancas" class="fotoFlores">
               </section>
               
               <div class="cards-planos">
@@ -199,14 +199,188 @@
               <p class="rodape-planos">Três opções de cuidado, com informações claras para uma escolha tranquila.</p>
         </section>
         <section id="contatos"> <!-- IZZIE -->
+            <!-- SEÇÃO CONTATOS (IZZIE) -->
+        <!-- Seção principal de contatos identificada pelo id="contatos" para navegação via âncora no menu -->
+        <section id="contatos" class="secao-contato">
+          <!-- Container que organiza o conteúdo em duas colunas (imagem à esquerda e canais à direita) -->
+          <div class="container">
+            
+            <!-- Coluna da Esquerda: Card com Imagem -->
+            <!-- Bloco visual que exibe a foto de fundo, uma camada escura (overlay) e a frase de acolhimento sobreposta -->
+            <div class="image-card">
+              <img src="../img/FotoContatos.webp" alt="Vaso com flores brancas" class="card-bg-img">
+              <div class="image-overlay"></div>
+              <div class="image-content">
+                <h2>Ao seu lado,<br>quando mais importa.</h2>
+                <p>Acolhimento para você e sua família.</p>
+              </div>
+            </div>
 
+            <!-- Coluna da Direita: Canais de Contato -->
+            <!-- Bloco com o cabeçalho de chamada e a lista de botões clicáveis para atendimento -->
+            <div class="contact-content">
+              <span class="eyebrow">ESTAMOS AQUI PARA VOCÊ</span>
+              <h1>Como você prefere<br>nos contatar?</h1>
+              <p class="subtitle">
+                Escolha o canal mais confortável para você.<br>
+                Nossa equipe está pronta para acolher e orientar.
+              </p>
+
+              <!-- Lista que empilha verticalmente todos os cards de contato -->
+              <div class="cards-list">
+                <!-- Card WhatsApp -->
+                <!-- Botão principal em destaque (classe 'featured') com ícone, número e selo "Fale com a gente" -->
+                <a href="about:blank" target="_blank" class="contact-card featured">
+                  <div class="icon-box">
+                    <i data-lucide="message-circle"></i>
+                  </div>
+                  <div class="card-info">
+                    <span class="label">WhatsApp</span>
+                    <span class="value">(47) 08000-0000</span>
+                  </div>
+                  <span class="badge">Fale com a gente</span>
+                  <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                </a>
+
+              <!-- Card E-mail -->
+              <!-- Botão que abre diretamente a tela de envio de e-mail do Gmail com o destinatário já preenchido -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=funerariasantamaria28@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="icon-box">
+                  <i data-lucide="mail"></i>
+              </div>
+              
+              <div class="card-info">
+                  <span class="label">E-mail</span>
+                  <span class="value">funerariasantamaria28@gmail.com</span>
+              </div>
+              <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+          </a>
+
+                <!-- Card Instagram -->
+                <!-- Botão de redirecionamento para o perfil oficial da funerária no Instagram -->
+                <a href="about:blank" target="_blank" class="contact-card">
+                  <div class="icon-box">
+                    <i data-lucide="instagram"></i>
+                  </div>
+                  <div class="card-info">
+                    <span class="label">Instagram</span>
+                    <span class="value">@funeraria.SantaMaria</span>
+                  </div>
+                  <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                </a>
+
+                <!-- Card Telefone -->
+                <!-- Botão exibindo o número de telefone fixo para atendimento direto -->
+                <a href="about:blank" target="_blank" class="contact-card">
+                  <div class="icon-box">
+                    <i data-lucide="phone"></i>
+                  </div>
+                  <div class="card-info">
+                    <span class="label">Telefone</span>
+                    <span class="value">(47) 08000-0800</span>
+                  </div>
+                  <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
         </section>
+        </section>
+
+        <!--Quem Somos-->
         <section id="quemSomos"> <!-- MARIA -->
+          <!--Cabeçalho-->
+          <div class="txt-intrducao-qs">
+              <h3>RESPEITO À HISTÓRIA. ACOLHIMENTO À FAMÍLIA.</h3>
+              <h1>Quem somos</h1>
+          </div>
 
-        </section>
-        <section id="unidades"> <!-- MARIA -->
+          <!--Texto (parágrafos)-->
+          <div class="paragrafo-qs">
+              <p>Na Funerária Santa Maria, compreendemos que a despedida de um ente querido é um dos momentos mais delicados da vida humana. Por isso, nossa missão vai além da prestação de serviços: oferecemos amparo humanizado, empatia e condução respeitosa para proporcionar paz e tranquilidade às famílias.</p>
+              <p>Com anos de dedicação e compromisso ético, cuidamos de cada detalhe do processo com absoluta transparência. Nossa equipe está preparada para atuar 24 horas por dia, oferecendo suporte integral e orientações claras, sempre respeitando os desejos, as crenças e a memória de quem partiu.</p>
+          </div>
 
-        </section>
+          <!--Imagem e legenda-->
+          <div class="imagem-qs">
+              <img src="../img/fotoflor.jpeg" alt="flores brancas" class="foto-flores">
+              <p class="legenda-qs">Cuidar é estar presente.</p>
+          </div>
+
+          <!--Div de valores junto com a categoria Quem Somos-->
+          <div class="valores">
+              <h1>Nossos Valores</h1>
+
+              <!--Containers dos valores-->
+              <div class="valores-container">
+                  <div class="hum-acolhimento">
+                      <h2>Humanização e Acolhimento</h2>
+                      <p>Priorizar a empatia, a escuta sensível e o carinho no atendimento, oferecendo amparo emocional e suporte humano além da execução dos serviços técnicos.</p>
+                  </div>
+                  <div class="respeito">
+                      <h2>Respeito e Dignidade</h2>
+                      <p>Tratar a trajetória de cada indivíduo com profunda reverência, preservando a honra da memória e o adeus de quem fica. Respeito e admiração pelo indivíduo independente da sua crença, religiões, tradições e filosofias de vida.</p>
+                  </div>
+                  <div class="cuidado">
+                      <h2>Excelência e Cuidado</h2>
+                      <p>Garantir alto padrão de qualidade, dedicação e excelência na infraestrutura, na preparação, no traslado e na condução das cerimônias de despedida.</p>
+                  </div>
+              </div>
+          </div>
+
+      </section>
+
+      <!--Unidades-->
+      <section id="unidades"> <!-- MARIA -->
+          <!--Cabeçalho unidades-->
+          <div class="txt-introducao-unid">
+              <h3>PRESENÇA E ACOLHIMENTO</h3>
+              <h1>Unidades</h1>
+          </div>
+
+          <!--Imagem e legenda-->
+          <div class="imagem-unid">
+              <img src="../img/fotoflor.jpeg" alt="Bosque de flores brancas" class="foto-flores">
+              <p class="legenda-unid">Um ambiente de serenidade e acolhimento.</p>
+          </div>
+          
+          <!--Div que mostra os locais-->
+          <div class="localizacao">
+
+              <!--Div para cada unidade-->
+              <div class="unidade-rs">
+                  <span class="material-symbols-outlined icone-pin">location_on</span>
+                  <h2>Uniadade: Rio Grande do Sul</h2>
+                  <p>Rua dos Ciprestes, 845 – Bairro Menino Deus, Porto Alegre – RS</p>
+                  <br>
+              </div>
+
+              <div class="unidade-sc">
+                  <span class="material-symbols-outlined icone-pin">location_on</span>
+                  <h2>Unidade: Santa Catarina</h2>
+                  <p>Avenida das Araucárias, 1420 – Bairro América, Joinville – SC</p>
+                  <br>
+              </div>
+
+              <div class="unidade-pr">
+                  <span class="material-symbols-outlined icone-pin">location_on</span>
+                  <h2>Unidade: Paraná</h2>
+                  <p>Rua Padre Serafim, 612 – Bairro Água Verde, Curitiba – PR</p>
+                  <br>
+              </div>
+          </div>
+
+              <!--Box-frase-->
+              <div class="box-frase">
+                  <h3>Acolhimento para você e sua família.</h3>
+               </div>
+
+
+
+
+      </section>
+
 
     </div>
     
@@ -275,5 +449,13 @@
     </footer>
         </footer>
     </div>
+
+    <!-- Script obrigatório para renderizar os ícones data-lucide -->
+<!-- Importa a biblioteca externa de ícones Lucide e converte todas as tags data-lucide em vetores SVG na tela -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+lucide.createIcons();
+</script>
+
 </body>
 </html>

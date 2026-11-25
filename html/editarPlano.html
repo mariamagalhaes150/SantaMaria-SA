@@ -6,13 +6,14 @@
     <title>Santa Maria - Funerária </title>
     <link rel="stylesheet" href="../css/editarPlano.css"> <!-- link do css-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> <!--Link dos icons (google api)-->
+    <script src="../javascript/editarPlano.js" defer></script>
 </head>
 <body>
     <header> <!-- Menu de navegação da página, com logo e parte de login ao lado-->
-        <img src="x" alt="Logo da empresa" class="logo"> <!-- Logo da empresa-->
+        <img src="../img/logo.png" alt="Logo da empresa" class="logo"> <!-- Logo da empresa-->
         <div class="navbar"> 
             <nav> <!--navegação-->
-                <ul class="nav-list" id="navList"> <!-- container das navegações da página -->
+                <ul class="navList" id="navList"> <!-- container das navegações da página -->
                   <li><a href="#inicio">Início</a></li>
                   <li><a href="#planos">Planos</a></li>
                   <li><a href="#contatos">Contatos</a></li>
@@ -21,7 +22,7 @@
                 </ul>
             </nav>
         </div>
-        <a href="conta/login.html" class="btn-link">
+        <a href="conta/login.html" class="btnLink">
             <span class="material-symbols-outlined"> <!-- bonequinho do login no botão-->
                 account_circle
             </span>
@@ -29,129 +30,151 @@
         </a>
     </header>
 
-    <div class="contentWrapper"> <!-- Container que envolve o menu e o conteúdo da página -->
+    <div class="contentWrapper"> <!-- container que envolve o menu e o conteúdo da página -->
         
-        <div class="verticalMenu"> <!-- Menu que fica na vertical (nossa q surpresa)-->
-            <div class="mainMenu"> <!-- Parte superior desse menuzinho -->
+        <div class="verticalMenu"> <!-- menu que fica na vertical (nossa q surpresa)-->
+            <div class="mainMenu"> <!-- parte superior desse menuzinho -->
                 <h2>ÁREA DO CLIENTE</h2>
                 <a href="editarPerfil.html" class="btnInactive">
-                    <span class="material-symbols-outlined"> <!-- Setinha sair-->
+                    <span class="material-symbols-outlined"> <!-- setinha voltar-->
                         arrow_back
                     </span>
                     Voltar
                 </a>
                 <p class="btnActive">
-                    <span class="material-symbols-outlined"> <!-- Bonequinho login-->
+                    <span class="material-symbols-outlined"> <!-- bonequinho do perfil-->
                         person
                     </span>
-                    Sair
+                    Meu perfil
                 </p>
             </div>
         </div>
 
-        <div class="content"> <!-- Conteúdo da página -->
-            <div class="columnCenter">
-                <div class="titulo">
-                    <h3>MINHA CONTA / MEU PERFIL</h3>
-                    <h1>Editar Perfil</h1>
-                    <h2>Seus dados, sempre por perto. Atualize suas informações com tranquilidade.</h2>
+        <div class="content"> <!-- conteúdo da página -->
+
+            <div class="titulo"> <!-- Titulos de cima -->
+                <h3>MINHA CONTA / MEU PERFIL</h3>
+                <div class="tituloLinha"> <!-- titulo + botão "pessoas do plano" lado a lado -->
+                    <h1>Editar perfil</h1>
+                    <a href="editarPlano.html" class="buttonHero">
+                        <span class="material-symbols-outlined"> <!-- setinha do botão-->
+                            arrow_back
+                        </span>
+                        Pessoas do plano
+                    </a>
                 </div>
-                <div class="cardPerfil">    
-                    <div class="PfpName">
-                        <div class="Pfp">
-                            <img src="../img/perfil.png" alt="Foto de perfil do usuário">
-                        </div>
-                        <div class="Name">
-                            <h1>Nome do Usuário</h1>
-                            <label for="galleryInput" style="color: blue; text-decoration: underline; cursor: pointer;">
-                                Alterar foto
-                            </label>
-                        </div>
-                    </div>
-                    <form action="Salvar alterações" method="POST">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="nome" value="Nome do Usuário" required>
-            
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" value="Email do Usuário" required>
-            
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" name="telefone" value="Telefone do Usuário" required>
-            
-                        <label for="anoNascimento">Ano de Nascimento</label>
-                        <input type="number" id="anoNascimento" name="anoNascimento" value="Ano de Nascimento do Usuário" required>
-            
-                        <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf" value="CPF do Usuário" required>
-            
-                        <label for="vinculo">Vínculo no Plano</label>
-                        <input type="text" id="vinculo" name="vinculo" value="Vínculo do Usuário" required>
-            
-                        <div class="formButtons">
-                            <button type="submit" class="btnSalvar">Salvar Alterações</button>
-                            <button type="button" class="btnCancelar">Cancelar</button>
-                        </div> 
-                    </form>
-                </div>
+                <h2>Seus dados, sempre por perto. Atualize suas informações com tranquilidade.</h2>
             </div>
 
-            <div class="containerDetails"> 
+            <div class="cardPerfil"> <!-- card principal do perfil -->
+                <div class="pfpName"> <!-- foto + nome do usuário -->
+                    <div class="pfp"> 
+                        <img id="profileImage" src="../img/fotoPerfil.jpg" alt="Foto de perfil do usuário"> 
+                    </div> 
+                    <div class="nameBox"> 
+                        <h2>Mariana Souza</h2>
+                        <label for="galleryInput" class="alterarFoto">Alterar foto</label>
+                        <input type="file" id="galleryInput" accept="image/*" hidden>
+                    </div>
+                </div>
+
+                <form action="#" method="POST"> 
+                    <div class="formGrid">
+                        <div class="formGroup fullWidth">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" value="Mariana Souza" required>
+                        </div>
+
+                        <div class="formGroup fullWidth">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" value="mariana@exemplo.com" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" value="(11) 99999-0000" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="anoNascimento">Ano de nascimento</label>
+                            <input type="number" id="anoNascimento" name="anoNascimento" value="1995" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" value="***.***.***-**" readonly>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="vinculo">Vínculo no plano</label>
+                            <input type="text" id="vinculo" name="vinculo" value="Titular" readonly>
+                        </div>
+                    </div>
+                    <div class="formButtons"> <!-- cancelar na esquerda, salvar na direita -->
+                        <button type="button" class="btnCancelar">Cancelar</button>
+                        <button type="submit" class="btnSalvar">Salvar alterações</button>
+                    </div> 
+                </form>
+            </div>
+
+            <div class="containerDetails"> <!-- Cards da direita -->
                 <div class="cardInfo">
-                    <img src="../img/iconePlano.png" alt="Ícone do plano">
-                    <h1>Cuidar começa nos detalhes.</h1>
-                    <p>Informações atualizadas ajudam nossa equipe a estar mais perto de você.</p>
+                    <img src="../img/fotoflor.jpeg" alt="Jardim com flores brancas" class="cardImg">
+                    <div class="cardBody">
+                        <h2>Cuidar começa nos detalhes.</h2>
+                        <p>Informações atualizadas ajudam nossa equipe a estar mais perto de você.</p>
+                    </div>
                 </div>
                 <div class="cardInfo2">
-                    <h1>Seu perfil, do seu jeito</h1>
+                    <h2>Seu perfil, do seu jeito</h2>
                     <p>Atualize sua foto, nome e contatos.<br>Revise as informações antes de salvar para manter seu cadastro em dia.</p>
                 </div>
                 <div class="cardInfo3">
-                    <h1>Pessoas no seu plano</h1>
-                    <a href="editarPlano.html" class="btn-link">
-                        Gerenciar pessoas do Plano
-                        <span class="material-symbols-outlined"> <!-- bonequinho do login no botão-->
+                    <h2>3 pessoas no seu plano</h2>
+                    <a href="editarPlano.html" class="btnOut">
+                        Gerenciar pessoas do plano
+                        <span class="material-symbols-outlined"> <!-- setinha diagonal-->
                             arrow_outward
                         </span>
                     </a>
                 </div>
-
             </div>
+
         </div>
     </div>
-    <footer class="footer-santa-maria"> <!-- IZZIE -->
-        <div class="footer-container">
-            <div class="footer-top">
-                
+
+    <footer class="footerSantaMaria"> <!-- IZZIE -->
+        <div class="footerContainer">
+            <div class="footerTop">
                 <!-- Coluna 1: Marca -->
-                <div class="footer-col col-marca">
-                    <h2 class="footer-logo">Santa Maria</h2>
-                    <p class="footer-slogan">Cuidar é estar presente.</p>
+                <div class="footerCol colMarca">
+                    <h2 class="footerLogo">Santa Maria</h2>
+                    <p class="footerSlogan">Cuidar é estar presente.</p>
                 </div>
     
                 <!-- Coluna 2: Contatos -->
-                <div class="footer-col col-contatos">
+                <div class="footerCol colContatos">
                     <h3>Contatos</h3>
                     <ul>
                         <li>
-                            <span class="contato-label">Atendimento</span>
-                            <span class="contato-valor">+55 47 1234-5678</span>
+                            <span class="contatoLabel">Atendimento</span>
+                            <span class="contatoValor">+55 47 1234-5678</span>
                         </li>
                         <li>
-                            <span class="contato-label">Assistência</span>
-                            <span class="contato-valor">+55 47 1234-5678</span>
+                            <span class="contatoLabel">Assistência</span>
+                            <span class="contatoValor">+55 47 1234-5678</span>
                         </li>
                         <li>
-                            <span class="contato-label">Administração</span>
-                            <span class="contato-valor">+55 47 1234-5678</span>
+                            <span class="contatoLabel">Administração</span>
+                            <span class="contatoValor">+55 47 1234-5678</span>
                         </li>
                     </ul>
                 </div>
     
                 <!-- Coluna 3: Menu -->
-                <div class="footer-col col-menu">
+                <div class="footerCol colMenu">
                     <h3>Menu</h3>
                     <ul>
-                        <!-- Para linkar com as páginas!-->
                         <li><a href="#">Planos</a></li>
                         <li><a href="#">Contatos</a></li>
                         <li><a href="#">Quem somos</a></li>
@@ -160,27 +183,23 @@
                 </div>
     
                 <!-- Coluna 4: Nossas unidades -->
-                <div class="footer-col col-unidades">
+                <div class="footerCol colUnidades">
                     <h3>Nossas unidades</h3>
-                    <div class="mapa-ilustrativo">
-                        <div class="mapa-area-verde"></div>
-                        <div class="mapa-rua-principal"></div>
-                        <div class="mapa-pin"></div>
+                    <div class="mapaIlustrativo">
+                        <div class="mapaAreaVerde"></div>
+                        <div class="mapaRuaPrincipal"></div>
+                        <div class="mapaPin"></div>
                     </div>
-                    <span class="mapa-legenda">P.S.: mapa ilustrativo!</span>
+                    <span class="mapaLegenda">P.S.: mapa ilustrativo!</span>
                 </div>
-    
             </div>
-        <footer> <!--IZZIE -->
-
-            <!-- Créditos -->
-            <hr class="footer-linha">
     
-            <div class="footer-bottom">
+            <!-- Créditos -->
+            <hr class="footerLinha">
+            <div class="footerBottom">
                 <p>Desenvolvido por: Emanuela Gonçalves, Gabriela M. Leite, Isadora R. Guilherme e Maria E. Magalhães.</p>
             </div>
-        </div>
+        </div> <!-- Fecha .footerContainer -->
     </footer>
-        </footer>
-    </div>
+</body>
 </html>

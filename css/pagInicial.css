@@ -197,7 +197,7 @@ header {
 /* ==== PLANOS ====*/
 
 /*Foto da flor branca dos planos*/
-.foto-flores {
+.fotoFlores {
     width: 340px;
     height: 165px;
     object-fit: cover;
@@ -553,3 +553,621 @@ header {
     color: #b8c2bd;
 }
 
+/* == QUEM SOMOS E UNIDADES */
+
+#quemSomos {
+  font-family: 'corpo', sans-serif;
+  letter-spacing: 1.5px;
+  background-color: #F7F5F0;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 0 0 calc(50% - 50vw);
+  padding: 5rem 0 0 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-areas:
+      "intro intro"
+      "texto imagem"
+      "valores valores";
+  column-gap: 4.5rem;
+  row-gap: 2.2rem;
+  align-items: start;
+}
+
+/* Cabeçalho da seção */
+.txt-intrducao-qs {
+  grid-area: intro;
+  padding: 0 6vw;
+}
+
+.txt-intrducao-qs h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7A827A;
+  margin: 0 0 0.75rem 0;
+}
+
+.txt-intrducao-qs h1 {
+  font-family: 'titulo', serif;
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  font-weight: 400;
+  color: #21382B;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Coluna da esquerda: parágrafos */
+.paragrafo-qs {
+  grid-area: texto;
+  padding-left: 6vw;
+  color: #3A4A40;
+  font-size: 1.3rem;
+  line-height: 1.68;
+}
+
+.paragrafo-qs p {
+  margin: 0 0 1.35rem 0;
+  text-align: justify;
+}
+
+.paragrafo-qs p:last-child {
+  margin-bottom: 0;
+}
+
+/* Coluna da direita: imagem e legenda */
+.imagem-qs {
+  grid-area: imagem;
+  padding-right: 6vw;
+}
+
+.foto-flores {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 65px 0 65px 0;
+}
+
+.legenda-qs {
+  font-size: 1rem;
+  color: #7A827A;
+  margin: 0.85rem 0 0 0;
+}
+
+/* Faixa inferior: Nossos valores de ponta a ponta */
+.valores {
+  grid-area: valores;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #E8EBE3;
+  margin: 2.5rem 0 0 0;
+  padding: 4.5rem 6% 5.5rem 6%;
+}
+
+.valores h1 {
+  font-family: 'titulo', serif;
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: #21382B;
+  line-height: 1.1;
+  margin: 0 0 2.5rem 0;
+}
+
+.valores-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+}
+
+.hum-acolhimento,
+.respeito,
+.cuidado {
+  border-top: 1px solid #CFD4C9;
+  padding-top: 1.5rem;
+}
+
+.hum-acolhimento h2,
+.respeito h2,
+.cuidado h2 {
+  font-family: 'titulo', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #21382B;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+}
+
+.hum-acolhimento p,
+.respeito p,
+.cuidado p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #3A4A40;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 860px) {
+  #quemSomos {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "intro"
+          "texto"
+          "imagem"
+          "valores";
+      padding: 3.5rem 0 0 0;
+      row-gap: 1.8rem;
+  }
+
+  .paragrafo-qs,
+  .imagem-qs {
+      padding: 0 6%;
+  }
+
+  .foto-flores {
+      border-radius: 45px 0 45px 0;
+  }
+
+  .valores {
+      margin-top: 1.8rem;
+      padding: 3.5rem 6%;
+  }
+
+  .valores-container {
+      grid-template-columns: 1fr;
+      gap: 2.2rem;
+  }
+}
+
+/* SEÇÃO: UNIDADES*/
+ #unidades {
+  font-family: 'corpo', sans-serif;
+  letter-spacing: 1px;
+  background-color: #F7F5F0;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 0 0 calc(50% - 50vw);
+  padding: 5rem 6vw;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-areas:
+      "intro intro"
+      "locais imagem"
+      "frase frase";
+  column-gap: 4.5rem;
+  row-gap: 2.5rem;
+  align-items: start;
+}
+
+/* Cabeçalho */
+.txt-introducao-unid {
+  grid-area: intro;
+}
+
+.txt-introducao-unid h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7A827A;
+  margin: 0 0 0.75rem 0;
+}
+
+.txt-introducao-unid h1 {
+  font-family: 'titulo', serif;
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  font-weight: 400;
+  color: #21382B;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Coluna da esquerda: lista de unidades */
+.localizacao {
+  grid-area: locais;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.unidade-rs,
+.unidade-sc,
+.unidade-pr {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 1.1rem;
+  align-items: start;
+}
+
+.icone-pin {
+  grid-row: 1 / 3;
+  font-size: 28px;
+  color: #21382B;
+  line-height: 1;
+  margin-top: 0.15rem;
+  user-select: none;
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.unidade-rs h2,
+.unidade-sc h2,
+.unidade-pr h2 {
+  font-family: 'titulo', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #21382B;
+  line-height: 1.25;
+  margin: 0 0 0.35rem 0;
+}
+
+.unidade-rs p,
+.unidade-sc p,
+.unidade-pr p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #5A665E;
+  margin: 0;
+}
+
+.unidade-rs p,
+.unidade-sc p {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #E2E4DD;
+}
+
+/* Coluna da direita: imagem e legenda */
+.imagem-unid {
+  grid-area: imagem;
+}
+
+.imagem-unid .foto-flores {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-radius: 65px 0 65px 0;
+}
+
+.legenda-unid {
+  font-size: 1rem;
+  color: #7A827A;
+  margin: 0.85rem 0 0 0;
+}
+
+/* Faixa inferior com frase de acolhimento */
+.box-frase {
+  grid-area: frase;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #E7EBE2;
+  border-radius: 6px;
+  padding: 1.55rem 2.2rem;
+  margin-top: 0.75rem;
+}
+
+.box-frase h3 {
+  font-family: 'titulo', serif;
+  font-size: clamp(1.25rem, 1.8vw, 1.45rem);
+  font-weight: 400;
+  color: #21382B;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 860px) {
+  #unidades {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "intro"
+          "locais"
+          "imagem"
+          "frase";
+      padding: 3.5rem 6vw;
+      row-gap: 2rem;
+  }
+
+  .imagem-unid .foto-flores {
+      border-radius: 45px 0 45px 0;
+  }
+}
+
+/* === CONTATOS  ==== */
+
+/* ==== CONTATOS ==== */
+
+/* Define as variáveis de cores/medidas isoladas para esta seção e configura o espaçamento e alinhamento geral dela */
+.secao-contato {
+  /* Variáveis isoladas apenas para esta seção */
+  --bg-section: #F8F7F2;
+  --primary-green: #213C31;
+  --primary-green-hover: #172B23;
+  --text-muted: #6C7570;
+  --border-color: #E2E1DA;
+  --card-icon-bg: #ECEBE4;
+  --white: #FFFFFF;
+  --altura-menu-fixo: 95px;
+
+  /* Estilos da seção */
+  width: 100%;
+  background-color: var(--bg-section);
+  padding: 4rem 60px 5rem 60px;
+  scroll-margin-top: var(--altura-menu-fixo);
+  display: flex;
+  justify-content: center;
+}
+
+/* Cria o layout em grade (Grid) dividindo a seção em duas colunas: a da imagem (490px) e a dos contatos (restante do espaço) */
+.secao-contato .container {
+  max-width: 1440px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 490px 1fr;
+  gap: 7rem;
+  align-items: center;
+}
+
+/* --- Coluna Esquerda (Imagem) --- */
+
+/* Estiliza a moldura do card da imagem com altura fixa, cantos arredondados e alinha o texto na parte inferior */
+.secao-contato .image-card {
+  position: relative;
+  height: 660px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.75rem;
+  background-color: #d8d3c8;
+}
+
+/* Faz a imagem preencher todo o fundo do card sem distorcer */
+.secao-contato .card-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Cria um degradê escuro na base da foto para dar contraste e facilitar a leitura do texto branco */
+.secao-contato .image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(22, 38, 32, 0.90) 0%,
+    rgba(22, 38, 32, 0.35) 38%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  z-index: 1;
+}
+
+/* Posiciona o bloco de texto sobre a imagem e o degradê */
+.secao-contato .image-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+}
+
+/* Estiliza o título principal sobre a foto com fonte serifada */
+.secao-contato .image-content h2 {
+  font-family: 'titulo', 'Lora', serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Estiliza o pequeno parágrafo de apoio logo abaixo do título da foto */
+.secao-contato .image-content p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- Coluna Direita (Contatos) --- */
+
+/* Organiza o conteúdo da coluna direita em vertical */
+.secao-contato .contact-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Estiliza o subtítulo superior em letras maiúsculas espaçadas ("ESTAMOS AQUI PARA VOCÊ") */
+.secao-contato .eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+
+/* Estiliza o título principal da seção de contatos ("Como você prefere nos contatar?") */
+.secao-contato .contact-content h1 {
+  font-family: 'titulo', 'Lora', serif;
+  font-weight: 400;
+  font-size: 3.25rem;
+  line-height: 1.12;
+  color: var(--primary-green);
+  margin-bottom: 1.25rem;
+}
+
+/* Estiliza o texto descritivo abaixo do título principal */
+.secao-contato .subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+/* --- Lista de Cards --- */
+
+/* Empilha os botões/cards de contato verticalmente com espaçamento entre eles */
+.secao-contato .cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Estiliza a estrutura base de cada botão/card de contato (borda, espaçamento e alinhamento interno) */
+.secao-contato .contact-card {
+  display: flex;
+  align-items: center;
+  padding: 1.15rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--primary-green);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+/* Aplica fundo branco, sombra suave e leve elevação quando o mouse passa sobre um card */
+.secao-contato .contact-card:hover {
+  background-color: var(--white);
+  border-color: #cfd1c9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(33, 60, 50, 0.05);
+}
+
+/* Cria o círculo de fundo onde fica o ícone à esquerda de cada card */
+.secao-contato .icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--card-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.1rem;
+  flex-shrink: 0;
+  color: var(--primary-green);
+}
+
+/* Define o tamanho dos ícones SVG dentro da bolinha */
+.secao-contato .icon-box svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* Agrupa o nome do canal e o contato (ex: E-mail e endereço) um acima do outro */
+.secao-contato .card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Estiliza o rótulo menor do card (ex: "WhatsApp", "E-mail") */
+.secao-contato .card-info .label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
+}
+
+/* Estiliza o dado principal de contato (ex: número de telefone ou @ do Instagram) */
+.secao-contato .card-info .value {
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+/* Estiliza o ícone de seta diagonal no canto direito do card */
+.secao-contato .arrow-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+/* Move levemente a seta na diagonal quando o mouse passa sobre o card */
+.secao-contato .contact-card:hover .arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+/* --- Estilo do Card em Destaque (WhatsApp) --- */
+
+/* Aplica o fundo verde-escuro e texto branco para destacar o card principal (WhatsApp) */
+.secao-contato .contact-card.featured {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var(--white);
+}
+
+/* Escurece o fundo do card em destaque ao passar o mouse */
+.secao-contato .contact-card.featured:hover {
+  background-color: var(--primary-green-hover);
+  border-color: var(--primary-green-hover);
+}
+
+/* Ajusta a cor do círculo do ícone no card verde */
+.secao-contato .contact-card.featured .icon-box {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+}
+
+/* Ajusta a cor do rótulo menor ("WhatsApp") para branco translúcido */
+.secao-contato .contact-card.featured .label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Deixa a seta diagonal branca no card em destaque */
+.secao-contato .contact-card.featured .arrow-icon {
+  color: var(--white);
+}
+
+/* Estiliza a pílula/etiqueta "Fale com a gente" dentro do card do WhatsApp */
+.secao-contato .badge {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  margin-right: 1.5rem;
+}
+
+/* --- Responsividade --- */
+
+/* Adapta a largura da foto e o espaçamento em telas médias (notebooks menores/tablets) */
+@media (max-width: 1100px) {
+  .secao-contato .container {
+      grid-template-columns: 400px 1fr;
+      gap: 3.5rem;
+  }
+}
+
+/* Reorganiza o layout para uma única coluna (foto em cima, botões embaixo) em telas de celular */
+@media (max-width: 920px) {
+  .secao-contato {
+      padding: 3rem 1.5rem;
+  }
+
+  .secao-contato .container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      max-width: 540px;
+  }
+
+  .secao-contato .image-card {
+      height: 360px;
+  }
+
+  .secao-contato .contact-content h1 {
+      font-size: 2.25rem;
+  }
+
+  .secao-contato .badge {
+      display: none;
+  }
+}
