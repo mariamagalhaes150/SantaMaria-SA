@@ -1,0 +1,369 @@
+/* === FONTES LOCAIS (Mesmas do pagInicial.css) === */
+@font-face {
+    font-family: 'corpo';
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'titulo';
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* === VARIÁVEIS E RESET === */
+:root {
+    --bg-page: #F8F7F2;
+    --bg-card: #FFFFFF;
+    --primary-green: #213C31;
+    --primary-green-hover: #172B23;
+    --text-main: #213C31;
+    --text-muted: #6C7570;
+    --text-placeholder: #9AA19D;
+    --border-color: #E2E1DA;
+    --border-focus: #213C31;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'corpo', 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === CABEÇALHO === */
+.login-header {
+    width: 100%;
+    padding: 0 60px;
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--primary-green);
+}
+
+.logo-emblem {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-family: 'titulo', 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--primary-green);
+}
+
+.brand-sub {
+    font-size: 8.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.back-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.back-link:hover {
+    color: var(--primary-green);
+}
+
+/* === CONTEÚDO PRINCIPAL E CARD === */
+.login-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 470px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 48px 44px;
+    box-shadow: 0 4px 20px rgba(33, 60, 49, 0.02);
+}
+
+.eyebrow {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    font-family: 'titulo', 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* === MENSAGENS DE FEEDBACK (JS) === */
+.feedback-message {
+    display: none;
+    padding: 11px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.feedback-message.error {
+    display: block;
+    background-color: #FDF2F2;
+    border: 1px solid #F5C2C2;
+    color: #9B2C2C;
+}
+
+.feedback-message.success {
+    display: block;
+    background-color: #EEF5F1;
+    border: 1px solid #B7D4C5;
+    color: var(--primary-green);
+}
+
+/* === FORMULÁRIO === */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 46px;
+    padding: 0 42px 0 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-card);
+    font-size: 13.5px;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--text-placeholder);
+}
+
+.input-wrapper input:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(33, 60, 49, 0.06);
+}
+
+.input-icon {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.input-icon svg {
+    width: 17px;
+    height: 17px;
+}
+
+.btn-eye {
+    background: none;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.btn-eye:hover {
+    color: var(--primary-green);
+}
+
+.forgot-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.forgot-link {
+    font-size: 12px;
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* === BOTÕES === */
+.actions-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.btn {
+    height: 44px;
+    border-radius: 4px;
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+}
+
+.btn-outline:hover {
+    background-color: rgba(33, 60, 49, 0.05);
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    border: 1px solid var(--primary-green);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-green-hover);
+    border-color: var(--primary-green-hover);
+}
+
+/* === NOTA DE SEGURANÇA === */
+.security-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.security-note svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* === RODAPÉ MINIMALISTA === */
+.login-footer {
+    width: 100%;
+    padding: 0 60px;
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 22px 0;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--text-muted);
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .login-header,
+    .login-footer {
+        padding: 0 20px;
+    }
+
+    .login-card {
+        padding: 36px 24px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}

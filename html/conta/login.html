@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Santa Maria Assistência Funerária</title>
+    <!-- Caminho ajustado considerando que login.html está dentro da pasta /conta -->
+    <link rel="stylesheet" href="../../css/conta/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CABEÇALHO DA PÁGINA DE LOGIN -->
+    <header class="login-header">
+        <div class="header-container">
+            <a href="../pagInicial.html" class="brand-logo">
+                <!-- Emblema circular com a cruz -->
+                <div class="logo-emblem">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                        <line x1="12" y1="4" x2="12" y2="20"></line>
+                        <line x1="7" y1="9" x2="17" y2="9"></line>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Santa Maria</span>
+                    <span class="brand-sub">ASSISTÊNCIA FUNERÁRIA</span>
+                </div>
+            </a>
+
+            <a href="../pagInicial.html" class="back-link">
+                <i data-lucide="arrow-left"></i>
+                <span>Voltar ao site</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- ÁREA CENTRAL COM O CARD DE LOGIN -->
+    <main class="login-main">
+        <div class="login-card">
+            <span class="eyebrow">MINHA CONTA</span>
+            <h1>Login</h1>
+            <p class="subtitle">Acesse sua conta. Estamos aqui para cuidar de você.</p>
+
+            <!-- Mensagem de feedback dinâmica (erro ou sucesso via JS) -->
+            <div id="feedbackMessage" class="feedback-message" aria-live="polite"></div>
+
+            <form id="loginForm" novalidate>
+                <!-- Campo E-mail -->
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        <span class="input-icon">
+                            <i data-lucide="mail"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Campo Senha -->
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                        <button type="button" id="toggleSenha" class="input-icon btn-eye" aria-label="Mostrar ou ocultar senha">
+                            <i data-lucide="eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                    <div class="forgot-wrapper">
+                        <a href="#" id="forgotPasswordLink" class="forgot-link">Esqueci a senha</a>
+                    </div>
+                </div>
+
+                <!-- Botões de Ação -->
+                <div class="actions-row">
+                    <a href="cadastro.html" id="btnCriarConta" class="btn btn-outline">Criar Conta</a>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </div>
+            </form>
+
+            <!-- Nota de Segurança -->
+            <div class="security-note">
+                <i data-lucide="lock"></i>
+                <span>Seus dados estão protegidos.</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ MINIMALISTA -->
+    <footer class="login-footer">
+        <div class="footer-container">
+            <span>Santa Maria • Assistência funerária</span>
+            <span>Cuidar é estar presente.</span>
+        </div>
+    </footer>
+
+    <!-- Ícones Lucide e Script da página -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/login.js"></script>
+
+    <script src="../../javascript/login.js"></script>
+</body>
+</html>
