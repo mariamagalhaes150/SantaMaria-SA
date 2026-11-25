@@ -1,0 +1,174 @@
+/* Remove a margem branca padrão do navegador nas bordas da tela */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#quemSomos {
+    font-family: 'corpo', sans-serif;
+    letter-spacing: 1.5px;
+    background-color: #F7F5F0;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 0 0 calc(50% - 50vw);
+    padding: 5rem 0 0 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-areas:
+        "intro intro"
+        "texto imagem"
+        "valores valores";
+    column-gap: 4.5rem;
+    row-gap: 2.2rem;
+    align-items: start;
+}
+
+/* Cabeçalho da seção */
+.txt-intrducao-qs {
+    grid-area: intro;
+    padding: 0 6vw;
+}
+
+.txt-intrducao-qs h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #7A827A;
+    margin: 0 0 0.75rem 0;
+}
+
+.txt-intrducao-qs h1 {
+    font-family: 'titulo', serif;
+    font-size: clamp(2.5rem, 4vw, 3.6rem);
+    font-weight: 400;
+    color: #21382B;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* Coluna da esquerda: parágrafos */
+.paragrafo-qs {
+    grid-area: texto;
+    padding-left: 6vw;
+    color: #3A4A40;
+    font-size: 1.3rem;
+    line-height: 1.68;
+}
+
+.paragrafo-qs p {
+    margin: 0 0 1.35rem 0;
+    text-align: justify;
+}
+
+.paragrafo-qs p:last-child {
+    margin-bottom: 0;
+}
+
+/* Coluna da direita: imagem e legenda */
+.imagem-qs {
+    grid-area: imagem;
+    padding-right: 6vw;
+}
+
+.foto-flores {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 65px 0 65px 0;
+}
+
+.legenda-qs {
+    font-size: 1rem;
+    color: #7A827A;
+    margin: 0.85rem 0 0 0;
+}
+
+/* Faixa inferior: Nossos valores de ponta a ponta */
+.valores {
+    grid-area: valores;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E8EBE3;
+    margin: 2.5rem 0 0 0;
+    padding: 4.5rem 6% 5.5rem 6%;
+}
+
+.valores h1 {
+    font-family: 'titulo', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    font-weight: 400;
+    color: #21382B;
+    line-height: 1.1;
+    margin: 0 0 2.5rem 0;
+}
+
+.valores-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+}
+
+.hum-acolhimento,
+.respeito,
+.cuidado {
+    border-top: 1px solid #CFD4C9;
+    padding-top: 1.5rem;
+}
+
+.hum-acolhimento h2,
+.respeito h2,
+.cuidado h2 {
+    font-family: 'titulo', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: #21382B;
+    line-height: 1.25;
+    margin: 0 0 1rem 0;
+}
+
+.hum-acolhimento p,
+.respeito p,
+.cuidado p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #3A4A40;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 860px) {
+    #quemSomos {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "texto"
+            "imagem"
+            "valores";
+        padding: 3.5rem 0 0 0;
+        row-gap: 1.8rem;
+    }
+
+    .paragrafo-qs,
+    .imagem-qs {
+        padding: 0 6%;
+    }
+
+    .foto-flores {
+        border-radius: 45px 0 45px 0;
+    }
+
+    .valores {
+        margin-top: 1.8rem;
+        padding: 3.5rem 6%;
+    }
+
+    .valores-container {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+}

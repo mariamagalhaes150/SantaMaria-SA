@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Maria - Funerária </title>
+    <link rel="stylesheet" href="../css/pagInicial.css"> <!-- link do css-->
+    <link rel="stylesheet" href="../css/pagInicial-qs.css"> <!-- link  do css quem somos-->
+    <link rel="stylesheet" href="../css/paginaInicial-unid.css"> <!-- link do css unidades-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> <!--Link dos icons (google api)-->
+</head>
+<body>
+    <header> <!-- Menu de navegação da página, com logo e parte de login ao lado-->
+        <img src="x" alt="Logo da empresa" class="logo"> <!-- Logo da empresa-->
+        <div class="navbar"> 
+            <nav> <!--navegação-->
+                <ul class="nav-list" id="navList"> <!-- container das navegações da página -->
+                  <li><a href="#inicio">Início</a></li>
+                  <li><a href="#planos">Planos</a></li>
+                  <li><a href="#contatos">Contatos</a></li>
+                  <li><a href="#quemSomos">Quem Somos</a></li>
+                  <li><a href="#unidades">Unidades</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="conta/login.html" class="btn-link">
+            <span class="material-symbols-outlined"> <!-- bonequinho do login no botão-->
+                account_circle
+            </span>
+            Minha Conta
+        </a>
+    </header>
+
+    <div class="content"> <!-- delimitar as bordas do site, onde vai ficar o conteúdo -->
+        <section id="inicio"> <!-- seção inicial da página -->
+            <div class="imageWrapper"> <!-- container pra segurar o card e a imagem -->
+                <img src="../img/heroContent.jpg" alt="fotoLirios" class="heroContent"> <!-- imagem -->
+                <div class="overlayCard"> <!-- card -->
+                  <h3>AO SEU LADO, A CADA MOMENTO</h3>
+                  <h1>Cuidado que ampara. Presença que acolhe.</h1>
+                  <h2>Em momentos de dores, Funerária Santa Maria garante a tranquilidade e conforto necessários, respeitando a situação e oferecendo serviços sem burocracia.</h2>
+                  <a href="#" id="contactBtn">
+                    Entre em contato
+                    <span class="material-symbols-outlined">
+                        arrow_outward
+                    </span>
+                </a>
+                </div>
+              </div>
+            <div class="tituloHero">
+                <h1>Santa Maria</h1>
+                <h3 id="subTituloHero">Respeito à história. Acolhimento à família.</h3>
+            </div>
+
+        <section id="planos"> <!-- EMANUELA -->
+            <section class="secao-planos">
+                <div>
+                  <!--Texto que vai do lado da imagem-->
+                  <span class="subtitulo-topo">CUIDADO PARA HOJE. TRANQUILIDADE PARA O AMANHÃ.</span>
+                  <h2 class="titulo-planos">Conheça os planos</h2>
+                  <p class="descricao-planos">
+                    Escolha o cuidado que faz sentido para sua família.<br>
+                    Conte com acolhimento e clareza em cada etapa.
+                  </p>
+                </div>
+              
+                <!--Imagem das fotos-->
+                <img src="../img/fotoflor.jpeg" alt="flores brancas" class="foto-flores">
+              </section>
+              
+              <div class="cards-planos">
+              
+                <!--Começo das caixinhas dos planos-->
+                <!-- PLANO 01 -->
+                <div class="card-plano">
+                  <div class="linha-topo"></div>
+                  <span class="numero-plano">PLANO 01</span>
+                  <h3 class="nome-plano">Bronze</h3>
+                  <p class="sub-plano">O cuidado essencial</p>
+              
+                  <hr class="divisor">
+              
+                  <div class="lista-beneficios">
+                    <div class="item-beneficio">
+                      <strong>Urna / Caixão</strong>
+                      <p>Padrão / Simples (madeira simples, sem entalhes, acabamento fosco)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Velório</strong>
+                      <p>Capela Pública / Comunitária (com ornamentação floral básica com flores da estação)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Translado</strong>
+                      <p>Apenas Municipal (cobertura local ou raio curto de 50 km a 100 km)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Cremação</strong>
+                      <p>Não inclusa (opcional)</p>
+                    </div>
+                  </div>
+              
+                  <hr class="divisor">
+              
+                  <div class="preco-area">
+                    <span class="label-preco">MENSALIDADE ESTIMADA</span>
+                    <div class="valor-mensal">R$ 30,00 a R$ 60,00</div>
+                    <span class="por-mes">por mês</span>
+              
+                    <span class="label-urgencia">Uso imediato (urgência)</span>
+                    <div class="valor-urgencia">R$ 2.500,00 a R$ 4.500,00</div>
+              
+                    <a href="#" class="btn-plano">Conhecer plano Bronze ↗</a>
+                  </div>
+                </div>
+              
+                <!-- PLANO 02 (DESTAQUE) -->
+                <div class="card-plano destaque">
+                  <div class="linha-topo"></div>
+                  <span class="numero-plano">PLANO 02</span>
+                  <h3 class="nome-plano">Prata</h3>
+                  <p class="sub-plano">Mais acolhimento para sua família</p>
+              
+                  <hr class="divisor">
+              
+                  <div class="lista-beneficios">
+                    <div class="item-beneficio">
+                      <strong>Urna / Caixão</strong>
+                      <p>Intermediária / Trabalhada (madeira tratada, verniz brilhante e alças varão)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Velório</strong>
+                      <p>Sala Privativa (capela particular ou cemitério parceiro com ornamentação de médio porte)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Translado</strong>
+                      <p>Raio de 300 a 500 km (cobertura estadual ou regional)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Cremação</strong>
+                      <p>Opção Simples (ou sepultamento)</p>
+                    </div>
+                  </div>
+              
+                  <hr class="divisor">
+              
+                  <div class="preco-area">
+                    <span class="label-preco">MENSALIDADE ESTIMADA</span>
+                    <div class="valor-mensal">R$ 65,00 a R$ 120,00</div>
+                    <span class="por-mes">por mês</span>
+              
+                    <span class="label-urgencia">Uso imediato (urgência)</span>
+                    <div class="valor-urgencia">R$ 5.000,00 a R$ 8.500,00</div>
+              
+                    <a href="#" class="btn-plano">Conhecer plano Prata ↗</a>
+                  </div>
+                </div>
+              
+                <!-- PLANO 03 -->
+                <div class="card-plano">
+                  <div class="linha-topo"></div>
+                  <span class="numero-plano">PLANO 03</span>
+                  <h3 class="nome-plano">Ouro</h3>
+                  <p class="sub-plano">Cuidado em cada detalhe</p>
+              
+                  <hr class="divisor">
+              
+                  <div class="lista-beneficios">
+                    <div class="item-beneficio">
+                      <strong>Urna / Caixão</strong>
+                      <p>Luxo / Madeira Nobre (entalhes trabalhados, estofamento em cetim e acabamento superior)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Velório</strong>
+                      <p>Sala VIP com Lounge (climatizada, com lounge de descanso e ornamentação nobre)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Translado</strong>
+                      <p>Cobertura Nacional (terrestre e/ou aérea sem limite de quilometragem)</p>
+                    </div>
+                    <div class="item-beneficio">
+                      <strong>Cremação</strong>
+                      <p>Incluso / Urna Cinerária Nobre (ou jazigo privativo)</p>
+                    </div>
+                  </div>
+              
+                  <hr class="divisor">
+              
+                  <div class="preco-area">
+                    <span class="label-preco">MENSALIDADE ESTIMADA</span>
+                    <div class="valor-mensal">R$ 130,00 a R$ 250,00+</div>
+                    <span class="por-mes">por mês</span>
+              
+                    <span class="label-urgencia">Uso imediato (urgência)</span>
+                    <div class="valor-urgencia">R$ 9.000,00 a R$ 20.000,00+</div>
+              
+                    <a href="#" class="btn-plano">Conhecer plano Ouro ↗</a>
+                  </div>
+                </div>
+              </div>
+              
+              <p class="rodape-planos">Três opções de cuidado, com informações claras para uma escolha tranquila.</p>
+        </section>
+        <section id="contatos"> <!-- IZZIE -->
+
+        </section>
+
+        <!--Quem Somos-->
+        <section id="quemSomos"> <!-- MARIA -->
+            <!--Cabeçalho-->
+            <div class="txt-intrducao-qs">
+                <h3>RESPEITO À HISTÓRIA. ACOLHIMENTO À FAMÍLIA.</h3>
+                <h1>Quem somos</h1>
+            </div>
+
+            <!--Texto (parágrafos)-->
+            <div class="paragrafo-qs">
+                <p>Na Funerária Santa Maria, compreendemos que a despedida de um ente querido é um dos momentos mais delicados da vida humana. Por isso, nossa missão vai além da prestação de serviços: oferecemos amparo humanizado, empatia e condução respeitosa para proporcionar paz e tranquilidade às famílias.</p>
+                <p>Com anos de dedicação e compromisso ético, cuidamos de cada detalhe do processo com absoluta transparência. Nossa equipe está preparada para atuar 24 horas por dia, oferecendo suporte integral e orientações claras, sempre respeitando os desejos, as crenças e a memória de quem partiu.</p>
+            </div>
+
+            <!--Imagem e legenda-->
+            <div class="imagem-qs">
+                <img src="../img/flor-qs.avif" alt="flores brancas" class="foto-flores">
+                <p class="legenda-qs">Cuidar é estar presente.</p>
+            </div>
+
+            <!--Div de valores junto com a categoria Quem Somos-->
+            <div class="valores">
+                <h1>Nossos Valores</h1>
+
+                <!--Containers dos valores-->
+                <div class="valores-container">
+                    <div class="hum-acolhimento">
+                        <h2>Humanização e Acolhimento</h2>
+                        <p>Priorizar a empatia, a escuta sensível e o carinho no atendimento, oferecendo amparo emocional e suporte humano além da execução dos serviços técnicos.</p>
+                    </div>
+                    <div class="respeito">
+                        <h2>Respeito e Dignidade</h2>
+                        <p>Tratar a trajetória de cada indivíduo com profunda reverência, preservando a honra da memória e o adeus de quem fica. Respeito e admiração pelo indivíduo independente da sua crença, religiões, tradições e filosofias de vida.</p>
+                    </div>
+                    <div class="cuidado">
+                        <h2>Excelência e Cuidado</h2>
+                        <p>Garantir alto padrão de qualidade, dedicação e excelência na infraestrutura, na preparação, no traslado e na condução das cerimônias de despedida.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Unidades-->
+        <section id="unidades"> <!-- MARIA -->
+            <!--Cabeçalho unidades-->
+            <div class="txt-introducao-unid">
+                <h3>PRESENÇA E ACOLHIMENTO</h3>
+                <h1>Unidades</h1>
+            </div>
+
+            <!--Imagem e legenda-->
+            <div class="imagem-unid">
+                <img src="../img/bosque-unid.jpg" alt="Bosque de flores brancas" class="foto-flores">
+                <p class="legenda-unid">Um ambiente de serenidade e acolhimento.</p>
+            </div>
+            
+            <!--Div que mostra os locais-->
+            <div class="localizacao">
+
+                <!--Div para cada unidade-->
+                <div class="unidade-rs">
+                    <span class="material-symbols-outlined icone-pin">location_on</span>
+                    <h2>Uniadade: Rio Grande do Sul</h2>
+                    <p>Rua dos Ciprestes, 845 – Bairro Menino Deus, Porto Alegre – RS</p>
+                    <br>
+                </div>
+
+                <div class="unidade-sc">
+                    <span class="material-symbols-outlined icone-pin">location_on</span>
+                    <h2>Unidade: Santa Catarina</h2>
+                    <p>Avenida das Araucárias, 1420 – Bairro América, Joinville – SC</p>
+                    <br>
+                </div>
+
+                <div class="unidade-pr">
+                    <span class="material-symbols-outlined icone-pin">location_on</span>
+                    <h2>Unidade: Paraná</h2>
+                    <p>Rua Padre Serafim, 612 – Bairro Água Verde, Curitiba – PR</p>
+                    <br>
+                </div>
+            </div>
+
+                <!--Box-frase-->
+                <div class="box-frase">
+                    <h3>Acolhimento para você e sua família.</h3>
+                 </div>
+
+
+
+
+        </section>
+
+    </div>
+    
+    <footer class="footer-santa-maria"> <!-- IZZIE -->
+        <div class="footer-container">
+            <div class="footer-top">
+                
+                <!-- Coluna 1: Marca -->
+                <div class="footer-col col-marca">
+                    <h2 class="footer-logo">Santa Maria</h2>
+                    <p class="footer-slogan">Cuidar é estar presente.</p>
+                </div>
+    
+                <!-- Coluna 2: Contatos -->
+                <div class="footer-col col-contatos">
+                    <h3>Contatos</h3>
+                    <ul>
+                        <li>
+                            <span class="contato-label">Atendimento</span>
+                            <span class="contato-valor">+55 47 1234-5678</span>
+                        </li>
+                        <li>
+                            <span class="contato-label">Assistência</span>
+                            <span class="contato-valor">+55 47 1234-5678</span>
+                        </li>
+                        <li>
+                            <span class="contato-label">Administração</span>
+                            <span class="contato-valor">+55 47 1234-5678</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Coluna 3: Menu -->
+                <div class="footer-col col-menu">
+                    <h3>Menu</h3>
+                    <ul>
+                        <!-- Para linkar com as páginas!-->
+                        <li><a href="#">Planos</a></li>
+                        <li><a href="#">Contatos</a></li>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Unidades</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Coluna 4: Nossas unidades -->
+                <div class="footer-col col-unidades">
+                    <h3>Nossas unidades</h3>
+                    <div class="mapa-ilustrativo">
+                        <div class="mapa-area-verde"></div>
+                        <div class="mapa-rua-principal"></div>
+                        <div class="mapa-pin"></div>
+                    </div>
+                    <span class="mapa-legenda">P.S.: mapa ilustrativo!</span>
+                </div>
+    
+            </div>
+        <footer> <!--IZZIE -->
+
+            <!-- Créditos -->
+            <hr class="footer-linha">
+    
+            <div class="footer-bottom">
+                <p>Desenvolvido por: Emanuela Gonçalves, Gabriela M. Leite, Isadora R. Guilherme e Maria E. Magalhães.</p>
+            </div>
+        </div>
+    </footer>
+        </footer>
+    </div>
+</body>
+</html>
