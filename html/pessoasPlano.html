@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Maria - Pessoas do plano</title>
+    <link rel="stylesheet" href="../css/pessoasPlano.css"> <!-- link do css-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> <!--Link dos icons (google api)-->
+    <script src="../javascript/pessoasPlano.js" defer></script>
+</head>
+<body>
+    <header> <!-- Menu de navegação da página, com logo e parte de login ao lado-->
+        <img src="../img/logo.png" alt="Logo da empresa" class="logo"> <!-- Logo da empresa-->
+        <div class="navbar">
+            <nav> <!--navegação-->
+                <ul class="navList" id="navList">
+                  <li><a href="pagInicial.html">Início</a></li>
+                  <li><a href="pagInicial.html#planos">Planos</a></li>
+                  <li><a href="pagInicial.html#contatos">Contatos</a></li>
+                  <li><a href="pagInicial.html#quemSomos">Quem Somos</a></li>
+                  <li><a href="pagInicial.html#unidades">Unidades</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="conta/login.html" class="btnLink">
+            <span class="material-symbols-outlined">account_circle</span>
+            Minha Conta
+        </a>
+    </header>
+
+    <div class="contentWrapper"> <!-- container que envolve o menu e o conteúdo da página -->
+
+        <aside class="verticalMenu"> <!-- menu vertical + filtros -->
+            <div class="mainMenu">
+                <h2>ÁREA DO CLIENTE</h2>
+                <p class="btnActive">
+                    <span class="material-symbols-outlined">group</span>
+                    Pessoas do plano
+                </p>
+                <a href="editarPerfil.html" class="btnInactive">
+                    <span class="material-symbols-outlined">person</span>
+                    Meu perfil
+                </a>
+            </div>
+
+            <form class="filtros" id="formFiltros"> <!-- filtros das pessoas -->
+                <h3 class="filtrosTitulo">
+                    <span class="material-symbols-outlined">filter_list</span>
+                    Filtrar pessoas
+                </h3>
+
+                <fieldset>
+                    <legend>Vínculo no plano</legend>
+                    <label class="check">
+                        <input type="checkbox" id="filtroTitular" checked>
+                        <span class="checkBox"></span>
+                        Titular
+                    </label>
+                    <label class="check">
+                        <input type="checkbox" id="filtroDependentes" checked>
+                        <span class="checkBox"></span>
+                        Dependentes
+                    </label>
+                </fieldset>
+
+                <div class="filtroSelect">
+                    <label for="filtroParentesco">Parentesco</label>
+                    <select id="filtroParentesco">
+                        <option value="todos">Todos</option>
+                        <option value="Pai">Pai</option>
+                        <option value="Mãe">Mãe</option>
+                        <option value="Você">Você</option>
+                        <option value="Cônjuge">Cônjuge</option>
+                        <option value="Filho(a)">Filho(a)</option>
+                        <option value="Irmão(ã)">Irmão(ã)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btnAplicar">Aplicar filtros</button>
+                <button type="button" class="btnLimpar" id="btnLimpar">Limpar filtros</button>
+            </form>
+
+            <div class="cardAjuda"> <!-- card de ajuda no rodapé do menu -->
+                <h2>Precisa de ajuda?</h2>
+                <p>Nossa equipe está aqui para acolher você.</p>
+                <a href="pagInicial.html#contatos">
+                    Falar com a equipe
+                    <span class="material-symbols-outlined">arrow_outward</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="content"> <!-- conteúdo da página -->
+
+            <div class="titulo"> <!-- Titulos de cima -->
+                <h3>MINHA CONTA / PESSOAS DO PLANO</h3>
+                <div class="tituloLinha">
+                    <h1>Pessoas do seu plano</h1>
+                    <a href="editarPerfil.html" class="buttonHero">
+                        <span class="material-symbols-outlined">edit</span>
+                        Editar meu perfil
+                    </a>
+                </div>
+                <h2>Cuide dos cadastros de quem você ama, com tudo em um só lugar.</h2>
+            </div>
+
+            <section class="bannerFamilia"> <!-- faixa verde com contador e foto -->
+                <div class="bannerTexto">
+                    <h2>Sua família, bem cuidada.</h2>
+                    <p>Máximo de quatro pessoas por plano.</p>
+                </div>
+                <div class="bannerContador" id="contadorPlano">3 de 4 pessoas</div>
+                <img src="../img/fotoflor.jpeg" alt="Jardim com flores brancas" class="bannerImg">
+            </section>
+
+            <div class="barraFerramentas"> <!-- busca + contagem + ordenação -->
+                <label class="busca" for="busca">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="search" id="busca" placeholder="Buscar por nome" autocomplete="off">
+                </label>
+                <span class="contagem" id="contagem">3 pessoas cadastradas</span>
+                <select id="ordenar" class="ordenar" aria-label="Ordenar pessoas">
+                    <option value="cadastro">Ordem de cadastro</option>
+                    <option value="nome">Nome (A–Z)</option>
+                    <option value="antigo">Mais velho primeiro</option>
+                    <option value="novo">Mais novo primeiro</option>
+                </select>
+            </div>
+
+            <div class="listaPessoas" id="listaPessoas"> <!-- cards das pessoas -->
+
+                <article class="cardPessoa" data-nome="Geraldo" data-vinculo="dependente" data-parentesco="Pai" data-ano="1967" data-ordem="1">
+                    <img src="../img/fotoperfilVazia.jpg" alt="Foto de Roberto" class="pessoaFoto">
+                    <h2>Geraçdp</h2>
+                    <p class="pessoaInfo">Pai · Nascimento: 1945</p>
+                    <span class="badge">Dependente</span>
+                    <a href="editarPerfil.html?id=1" class="btnEditar">
+                        <span class="material-symbols-outlined">edit</span>
+                        Editar dados
+                    </a>
+                </article>
+
+                <article class="cardPessoa" data-nome="Helena" data-vinculo="dependente" data-parentesco="Mãe" data-ano="1970" data-ordem="2">
+                    <img src="../img/fotoperfilVazia.jpg" alt="Foto de Helena" class="pessoaFoto">
+                    <h2>Helena</h2>
+                    <p class="pessoaInfo">Mãe · Nascimento: 1948</p>
+                    <span class="badge">Dependente</span>
+                    <a href="editarPerfil.html?id=2" class="btnEditar">
+                        <span class="material-symbols-outlined">edit</span>
+                        Editar dados
+                    </a>
+                </article>
+
+                <article class="cardPessoa" data-nome="Júlia" data-vinculo="titular" data-parentesco="Você" data-ano="1995" data-ordem="3">
+                    <img src="../img/fotoperfilVazia.jpg" alt="Foto de Mariana" class="pessoaFoto">
+                    <h2>Júlia</h2>
+                    <p class="pessoaInfo">Você · Nascimento: 1964</p>
+                    <span class="badge">Titular</span>
+                    <a href="editarPerfil.html" class="btnEditar">
+                        <span class="material-symbols-outlined">edit</span>
+                        Editar dados
+                    </a>
+                </article>
+
+                <div class="cardAdicionar" id="cardAdicionar"> <!-- card tracejado de adicionar -->
+                    <span class="addIcone"><span class="material-symbols-outlined">add</span></span>
+                    <h2 id="addTitulo">Mais alguém para cuidar</h2>
+                    <p id="addTexto">Você ainda tem 1 vaga disponível no seu plano.</p>
+                    <a href="adicionarPessoa.html" class="btnAdicionar" id="btnAdicionar">Adicionar pessoa</a>
+                </div>
+            </div>
+
+            <p class="semResultados" id="semResultados" hidden>Nenhuma pessoa encontrada com esses filtros.</p>
+
+            <p class="notaRodape">Mantenha os dados atualizados para facilitar o atendimento à sua família.</p>
+        </main>
+    </div>
+
+    <footer class="footerSantaMaria">
+        <div class="footerContainer">
+            <div class="footerTop">
+                <div class="footerCol colMarca">
+                    <h2 class="footerLogo">Santa Maria</h2>
+                    <p class="footerSlogan">Cuidar é estar presente.</p>
+                </div>
+                <div class="footerCol colContatos">
+                    <h3>Contatos</h3>
+                    <ul>
+                        <li><span class="contatoLabel">Atendimento</span><span class="contatoValor">+55 47 1234-5678</span></li>
+                        <li><span class="contatoLabel">Assistência</span><span class="contatoValor">+55 47 1234-5678</span></li>
+                        <li><span class="contatoLabel">Administração</span><span class="contatoValor">+55 47 1234-5678</span></li>
+                    </ul>
+                </div>
+                <div class="footerCol colMenu">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#">Planos</a></li>
+                        <li><a href="#">Contatos</a></li>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Unidades</a></li>
+                    </ul>
+                </div>
+                <div class="footerCol colUnidades">
+                    <h3>Nossas unidades</h3>
+                    <div class="mapaIlustrativo">
+                        <div class="mapaAreaVerde"></div>
+                        <div class="mapaRuaPrincipal"></div>
+                        <div class="mapaPin"></div>
+                    </div>
+                    <span class="mapaLegenda">P.S.: mapa ilustrativo!</span>
+                </div>
+            </div>
+            <hr class="footerLinha">
+            <div class="footerBottom">
+                <p>Desenvolvido por: Emanuela Gonçalves, Gabriela M. Leite, Isadora R. Guilherme e Maria E. Magalhães.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

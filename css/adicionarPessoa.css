@@ -1,0 +1,907 @@
+body {
+    background-color: #F8F7F2;
+    padding-top: 90px;
+    
+}
+
+* { /*reset geral*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'corpo', sans-serif;
+    font-weight: 500;
+}
+html {
+    scroll-padding-top: 50px;
+    scroll-behavior: smooth;
+}
+
+/* ===  Fontes ====*/
+
+@font-face {
+    font-family: 'corpo';
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'titulo';
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+/* === HEADER ====*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f8f3;
+    padding: 20px 60px;
+    border-bottom: 1px solid #e5e4df;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    max-height: 55px;
+    width: auto;
+}
+
+/* container da barra de navegação */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* espaço entre os botões */
+    margin-left: 10rem;
+}
+
+/* tirar estilização dos botões */
+.nav-list a {
+    text-decoration: none;
+    color: #3a443c;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* botão "minha conta" verde escuro */
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-color: #213c31;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: background-color 0.2s;
+}
+
+/* animação q deixa mais escuro quando passa o mouse */
+.btn-link:hover {
+    background-color: #172b23;
+}
+
+/* google icons api  */
+.btn-link .material-symbols-outlined {
+    font-size: 20px;
+}
+
+
+/*=== FLEXBOXES ====*/
+.contentWrapper {
+    display: flex;
+    gap: 3rem;
+}
+
+.content { 
+    display: flex;
+    flex: 1;
+    gap: 3rem;
+    padding: 20px;
+}
+
+.columnCenter {
+    flex: 2;
+}
+
+.containerDetails {
+    flex: 1;
+}
+
+
+/*==== MENU VERTICAL NA ESQUERDA====*/
+
+.verticalMenu { /*card principal*/
+    height: 90vh;
+    width: 12rem;
+    border-right: #c9c7bf 1px solid;
+    padding: 1.5rem;
+}
+
+.verticalMenu h2 {
+    font-size:medium;
+    color: grey;
+    margin-bottom: 2rem;
+}
+
+.btnInactive {
+    display: block;
+    background-color: #f9f8f3;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #3a443c;
+
+    transition: 0.2s ease-in-out;
+}
+
+.btnInactive:hover {
+  background-color: #cdd3d0;
+}
+
+.btnActive {
+    background-color: #aeb8b3;
+    border-radius: 5px;
+    margin-top: 1rem;
+    color: #3a443c;
+}
+
+
+
+.mainMenu { /*Parte superior desse menuzinho*/
+
+}
+
+/* ====FOOTER ----*/
+
+
+/* Seleciona a tag principal do rodapé */
+.footer-santa-maria {
+    background-color: #21372e;
+    color: #e6eae7;
+    padding: 55px 20px 35px;
+    box-sizing: border-box;
+}
+
+/* O asterisco (*) seleciona TODOS os elementos que estão dentro do rodapé */
+.footer-santa-maria * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container que segura e centraliza o conteúdo para não ficar colado nas pontas em telas muito grandes */
+.footer-santa-maria .footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Bloco superior onde ficam as colunas (Marca, Contatos, Menu e Unidades) */
+.footer-santa-maria .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-bottom: 35px;
+}
+
+/* Coluna Marca */
+.footer-santa-maria .col-marca {
+    flex: 1.4;
+    min-width: 210px;
+}
+
+/* Seleciona o título principal da marca ("Santa Maria") */
+.footer-santa-maria .footer-logo {
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-size: 32px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Seleciona o texto do slogan ("Cuidar é estar presente.") */
+.footer-santa-maria .footer-slogan {
+    font-size: 14px;
+    color: #cfd6d2;
+}
+
+/* Títulos das Colunas */
+.footer-santa-maria .footer-col h3 {
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 16px;
+    font: 'titulo';
+}
+
+/* Coluna Contatos */
+.footer-santa-maria .col-contatos {
+    flex: 1;
+    min-width: 150px;
+    font-family: 'titulo';
+}
+
+/* Seleciona o texto do slogan ("Cuidar é estar presente.") */
+/* Seleciona as listas não ordenadas (<ul>) dentro das colunas de Contatos e Menu */
+.footer-santa-maria .col-contatos ul,
+.footer-santa-maria .col-menu ul {
+    list-style: none;
+}
+
+/* Seleciona cada item da lista (<li>) dentro da coluna de Contatos */
+.footer-santa-maria .col-contatos li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+/* Seleciona os rótulos menores dos contatos (ex: "Atendimento", "Assistência") */
+.footer-santa-maria .contato-label {
+    font-size: 10px;
+    color: #aeb8b3;
+    margin-bottom: 2px;
+}
+
+/* Seleciona os valores/números dos contatos */
+.footer-santa-maria .contato-valor {
+    font-size: 13px;
+    color: #e6eae7;
+}
+
+/* Coluna Menu */
+.footer-santa-maria .col-menu {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* Seleciona cada item da lista (<li>) dentro da coluna de Menu */
+.footer-santa-maria .col-menu li {
+    margin-bottom: 12px;
+}
+
+/* Seleciona os links (<a>) dentro da coluna de Menu */
+.footer-santa-maria .col-menu a {
+    color: #dce2df;
+    text-decoration: none;
+}
+
+
+/* Seleciona o texto "Mapa ilustrativo" abaixo do mapa */
+.footer-santa-maria .mapa-legenda {
+    display: block;
+    font-size: 10px;
+    color: #aeb8b3;
+    margin-top: 6px;
+}
+
+/* Linha e Créditos */
+.footer-santa-maria .footer-linha {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 20px;
+}
+
+/* Seleciona o parágrafo de créditos na parte inferior ("desenvolvido por...") */
+.footer-santa-maria .footer-bottom p {
+    font-size: 11px;
+    color: #b8c2bd;
+}
+
+body {
+    background-color: #F8F7F2;
+    padding-top: 90px;
+}
+
+* { /*reset geral*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'corpo', sans-serif;
+    font-weight: 500;
+}
+html {
+    scroll-padding-top: 50px;
+    scroll-behavior: smooth;
+}
+
+/* ===  Fontes ====*/
+
+@font-face {
+    font-family: 'corpo';
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'titulo';
+    src: url('../fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* === HEADER ====*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f8f3;
+    padding: 20px 60px;
+    border-bottom: 1px solid #e5e4df;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    max-height: 55px;
+    width: auto;
+}
+
+/* container da barra de navegação */
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 35px; /* espaço entre os botões */
+    margin-left: 10rem;
+}
+
+/* tirar estilização dos botões */
+.navList a {
+    text-decoration: none;
+    color: #3a443c;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* botão "minha conta" verde escuro */
+.btnLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #213c31;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: background-color 0.2s;
+}
+
+/* animação q deixa mais escuro quando passa o mouse */
+.btnLink:hover {
+    background-color: #172b23;
+}
+
+/* google icons api  */
+.btnLink .material-symbols-outlined {
+    font-size: 20px;
+}
+
+
+/*=== FLEXBOXES ====*/
+.contentWrapper {
+    display: flex;
+    gap: 3rem;
+}
+
+.content { /*grade: titulo ocupa a linha toda, embaixo ficam o card e os cards da direita*/
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 3rem;
+    align-items: start;
+    padding: 20px 60px 20px 20px;
+}
+
+.titulo {
+    grid-column: 1 / -1; /*ocupa as duas colunas*/
+}
+
+.containerDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+/*==== MENU VERTICAL NA ESQUERDA====*/
+
+.verticalMenu { /*card principal*/
+    height: 90vh;
+    width: 12rem;
+    border-right: #c9c7bf 1px solid;
+    padding: 1.5rem;
+}
+
+.verticalMenu h2 {
+    font-size: medium;
+    color: grey;
+    margin-bottom: 2rem;
+}
+
+.btnInactive {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #f9f8f3;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #3a443c;
+
+    transition: 0.2s ease-in-out;
+}
+
+.btnInactive:hover {
+    background-color: #cdd3d0;
+}
+
+.btnActive { /*botão da página atual*/
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #aeb8b3;
+    border-radius: 5px;
+    margin-top: 1rem;
+    color: #3a443c;
+    margin-bottom: 1rem;
+}
+
+.mainMenu { /*Parte superior desse menuzinho*/
+    border-bottom: #c9c7bf 1px solid;
+}
+
+/* Titulos de cima */
+
+.titulo h3 {
+    color: grey;
+    letter-spacing: 2px;
+    font-size: small;
+    margin-bottom: 1.5rem;
+}
+
+.titulo h1 {
+    color: #213c13;
+    font-family: 'titulo', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.titulo h2 {
+    color: #3a443c;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.tituloLinha { /*titulo e botão "pessoas do plano" lado a lado*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.buttonHero { /*botão "pessoas do plano"*/
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px;
+    border: 1px solid #d1d1cc;
+    border-radius: 5px;
+    background-color: #fdfcf8;
+    color: #3a443c;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: background-color 0.2s;
+}
+
+.buttonHero:hover {
+    background-color: #e6eae7;
+}
+
+.buttonHero .material-symbols-outlined {
+    font-size: 16px;
+}
+
+
+/*==== CARD DO PERFIL ====*/
+
+.cardPerfil { /*A parte principal*/
+    background-color: #fdfcf8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: #c9c7bf 1px solid;
+}
+
+#profileImage { /*A imagem do perfil*/
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pfpName { /*O nome ao lado*/
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1rem;
+    border-bottom: #c9c7bf 1px solid;
+    padding-bottom: 1rem;
+}
+
+.nameBox h2 { /*nome do usuário*/
+    font-family: 'titulo', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #213c31;
+}
+
+.alterarFoto { /*link "alterar foto"*/
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 12px;
+    color: #213c31;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.formGrid { /*fazer uma grade com o formulario*/
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px 24px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d1d1cc;
+}
+
+.formGroup { /*Classe das coisas do formulario separadas*/
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fullWidth {
+    grid-column: span 2;
+}
+
+.formGroup label { /* as labels do formulario */
+    font-size: 14px;
+    color: #555;
+}
+
+.formGroup input { /*os inputs do formulario*/
+    padding: 12px 14px;
+    border: 1px solid #d1d1cc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #f6f5ef;
+    color: #222;
+}
+
+.formButtons { /*container dos botoes cancelar e salvar*/
+    display: flex;
+    justify-content: space-between; /*cancelar na esquerda, salvar na direita*/
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+.btnCancelar {
+    padding: 12px 28px;
+    min-width: 108px;
+    border: 1px solid #d1d1cc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #f6f5ef;
+
+    transition: background-color 0.2s;
+}
+
+.btnCancelar:hover {
+    background-color: #e0e0d9;
+}
+
+.btnSalvar {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #213c31;
+    color: #ffffff;
+
+    transition: background-color 0.2s;
+}
+
+.btnSalvar:hover {
+    background-color: #172b23;
+}
+
+#vinculo {
+    background-color: #e1e7df;
+    transition: background-color 0.2s;
+}
+
+#cpf {
+    background-color: #e1e7df;
+    transition: background-color 0.2s;
+}
+
+#cpf:focus, #vinculo:focus {
+    background-color: #d1d7cf;
+    outline: none;
+}
+
+
+/*==== cards da  direita ====*/
+
+.cardInfo, .cardInfo2, .cardInfo3 { /*o que os 3 cards tem em comum*/
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cardInfo {
+    background-color: #e9ede8;
+}
+
+.cardImg { /*foto do jardim em cima do primeiro card*/
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.cardBody {
+    padding: 1.5rem;
+}
+
+.cardInfo2 {
+    background-color: #fdfcf8;
+    border: 1px solid #d9d8d1;
+    padding: 1.5rem;
+}
+
+.cardInfo3 {
+    background-color: #e9ede8;
+    padding: 1.5rem;
+}
+
+.cardInfo h2, .cardInfo2 h2, .cardInfo3 h2 { /*titulos dos cards*/
+    font-family: 'titulo', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #213c31;
+    margin-bottom: 0.8rem;
+}
+
+.cardInfo p, .cardInfo2 p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #6b726d;
+}
+
+.btnOut { /*link "gerenciar pessoas do plano"*/
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #213c31;
+    text-decoration: none;
+}
+
+.btnOut .material-symbols-outlined {
+    font-size: 14px;
+}
+
+
+/* ====FOOTER ----*/
+
+
+/* Seleciona a tag principal do rodapé */
+.footerSantaMaria {
+    background-color: #21372e;
+    color: #e6eae7;
+    padding: 55px 20px 35px;
+    box-sizing: border-box;
+}
+
+/* O asterisco (*) seleciona TODOS os elementos que estão dentro do rodapé */
+.footerSantaMaria * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container que segura e centraliza o conteúdo para não ficar colado nas pontas em telas muito grandes */
+.footerSantaMaria .footerContainer {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Bloco superior onde ficam as colunas (Marca, Contatos, Menu e Unidades) */
+.footerSantaMaria .footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-bottom: 35px;
+}
+
+/* Coluna Marca */
+.footerSantaMaria .colMarca {
+    flex: 1.4;
+    min-width: 210px;
+}
+
+/* Seleciona o título principal da marca ("Santa Maria") */
+.footerSantaMaria .footerLogo {
+    font-family: 'titulo', serif; /*src só funciona dentro do @font-face, aqui é font-family*/
+    font-size: 32px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Seleciona o texto do slogan ("Cuidar é estar presente.") */
+.footerSantaMaria .footerSlogan {
+    font-size: 14px;
+    color: #cfd6d2;
+}
+
+/* Títulos das Colunas */
+.footerSantaMaria .footerCol h3 {
+    font-family: 'titulo', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+/* Coluna Contatos */
+.footerSantaMaria .colContatos {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Seleciona as listas não ordenadas (<ul>) dentro das colunas de Contatos e Menu */
+.footerSantaMaria .colContatos ul,
+.footerSantaMaria .colMenu ul {
+    list-style: none;
+}
+
+/* Seleciona cada item da lista (<li>) dentro da coluna de Contatos */
+.footerSantaMaria .colContatos li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+/* Seleciona os rótulos menores dos contatos (ex: "Atendimento", "Assistência") */
+.footerSantaMaria .contatoLabel {
+    font-size: 10px;
+    color: #aeb8b3;
+    margin-bottom: 2px;
+}
+
+/* Seleciona os valores/números dos contatos */
+.footerSantaMaria .contatoValor {
+    font-size: 13px;
+    color: #e6eae7;
+}
+
+/* Coluna Menu */
+.footerSantaMaria .colMenu {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* Seleciona cada item da lista (<li>) dentro da coluna de Menu */
+.footerSantaMaria .colMenu li {
+    margin-bottom: 12px;
+}
+
+/* Seleciona os links (<a>) dentro da coluna de Menu */
+.footerSantaMaria .colMenu a {
+    color: #dce2df;
+    text-decoration: none;
+}
+
+/* Coluna Unidades */
+.footerSantaMaria .colUnidades {
+    flex: 1.2;
+    min-width: 200px;
+}
+
+/* Caixinha do mapa ilustrativo (as 3 divs de dentro ficam posicionadas em cima dela) */
+.footerSantaMaria .mapaIlustrativo {
+    position: relative;
+    width: 200px;
+    height: 90px;
+    background-color: #2d4a3e;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Quadrado verde que representa uma área verde/parque */
+.footerSantaMaria .mapaAreaVerde {
+    position: absolute;
+    inset: 0 55% 40% 0;
+    background-color: #3a5c4d;
+}
+
+/* Linha clara que representa a rua principal */
+.footerSantaMaria .mapaRuaPrincipal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 6px;
+    background-color: #e6eae7;
+    transform: rotate(-12deg);
+}
+
+/* Bolinha amarela que marca a unidade */
+.footerSantaMaria .mapaPin {
+    position: absolute;
+    left: 60%;
+    top: 30%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e0b34a;
+}
+
+/* Seleciona o texto "Mapa ilustrativo" abaixo do mapa */
+.footerSantaMaria .mapaLegenda {
+    display: block;
+    font-size: 10px;
+    color: #aeb8b3;
+    margin-top: 6px;
+}
+
+/* Linha e Créditos */
+.footerSantaMaria .footerLinha {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 20px;
+}
+
+/* Seleciona o parágrafo de créditos na parte inferior ("desenvolvido por...") */
+.footerSantaMaria .footerBottom p {
+    font-size: 11px;
+    color: #b8c2bd;
+}
