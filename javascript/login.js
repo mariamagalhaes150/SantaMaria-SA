@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Redireciona para a página inicial após 1,3 segundos
             setTimeout(() => {
-                window.location.href = '../pagInicial.html';
+                window.location.href = '../editarPerfil.html';
             }, 1300);
         });
     }
