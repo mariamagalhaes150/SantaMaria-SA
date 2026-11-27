@@ -38,6 +38,33 @@ html {
     padding: 3.5rem;
   }
   
+/*===botao de emergencia====*/
+#emergencyBtn {
+  height: 10rem;
+  width: 10rem;
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom edge */
+  right: 20px;  /* Distance from the right edge */
+  background-color: #285821;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  border: solid 15px white;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  z-index: 1000; /* Increased to ensure it stays above other page elements */
+  
+  /* Optional: keeps the Material icon centered inside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: adds a subtle hover effect */
+#emergencyBtn:hover {
+  transform: scale(1.1);
+}
 
 /* === HEADER ====*/
 

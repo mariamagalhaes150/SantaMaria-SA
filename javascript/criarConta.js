@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Redireciona para a tela de login 
         //GABI AJUSTAR
 
-        window.location.href = '../';
+        window.location.href = '../html/conta/login.html';
     });
 });
 
