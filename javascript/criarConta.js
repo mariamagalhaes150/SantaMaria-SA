@@ -57,6 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            if (inputNome.value.length < 6) {
+                alert('Por favor, preencha seu nome completo. (Mínimo 6 caracteres)');
+                inputNascimento.focus();
+                return;
+            }
+
             if (inputNascimento.value.length < 10) {
                 alert('Por favor, preencha a data de nascimento completa (DD/MM/AAAA).');
                 inputNascimento.focus();
